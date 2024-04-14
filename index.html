@@ -30,7 +30,7 @@
       <section id="scrolly">
 
         <div class="sticky-thing">
-            <img src="new_haven_road_map.png" width="50%">
+            <img id="bgimg1" src="new_haven_road_map.png" width="50%">
               <!--  put something here???? -->
         </div>
 
@@ -67,6 +67,10 @@
                 </p>
             </div>
                 
+            <div class="step" id="step-two" style="margin-bottom:20rem;opacity:0.1%;">
+                <br>
+            </div>
+
             <!-- <div class="step" id="step-three" >
 			    <p>
 
@@ -99,11 +103,7 @@
 
             <div class="step" id="step-nine"> 
                 <!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
-                <p><b>But wait, what makes these random things Yale places?</b><br>
-                    
-                    There are a lot of reasons why a place can be a Yale Place. Sometimes it's history, 
-                    like in the case of the <span style="color: #99cc33">Grove Street Cemetery</span>, with 
-                    hundreds of Yale alumni over centuries buried within. <br><br>
+                <p><b>But waale alumni over centuries buried within. <br><br>
                     
                 </p>
             </div>
@@ -168,11 +168,13 @@
 			d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
 			d3.selectAll("#s0_A").classed('hidden', false);
 
-            d3.selectAll(".sticky-thing").select("img").classed("invisible", false);
-            d3.selectAll(".sticky-thing").select("img").style("margin-right", "10%");
+            d3.select("#bgimg1").classed("invisible", false);
+            d3.select("#bgimg1").style("margin-right", "10%");
+            d3.select(".sticky-thing").style("height", false);
 
-			// d3.select(".ai2html-container").style("margin-left", (window.innerWidth > 700) ? "30%" : "0");
-			// //   d3.selectAll("#s0_A").classed('hidden', true)
+			// d3.select("#bgimg1").style("margin-left", (window.innerWidth > 700) ? "auto" : "0");
+			// d3.select("#bgimg1").style("margin-right", (window.innerWidth > 700) ? "10%" : "auto");
+			//   d3.selectAll("#s0_A").classed('hidden', true)
 			// d3.select(".ai2html-container").style("transform", "scale(1.0)");
 			d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
 		})
@@ -183,23 +185,39 @@
 				d3.select("#campusBubble").classed('invisible', true);
 
 				// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
-				d3.select(".sticky-thing").select("img").classed("invisible", true);
+				d3.select("#bgimg1").classed("invisible", true);
 				// d3.selectAll("#s0_A").classed('hidden', true);
 				d3.select("#scrolly").style("background-color", "#ebd999");
 				// d3.selectAll(".g-onLoad_A").classed('hidden', false);
+                d3.select(".sticky-thing").style("height", "0px");
 			}
 		})
 
 		//   Entering Step One
 		d3.select("#step-one").on('stepin',function(e) {
 			// d3.selectAll("#s0_A").classed('hidden', true)
-			d3.selectAll("#s1_A").classed('hidden', false); // mory's stuff
-			// d3.selectAll(".g-onLoad_A").classed('hidden', true);
-			d3.selectAll("#s2_A").classed('hidden', true);
+			// d3.selectAll("#s1_A").classed('hidden', false); // mory's stuff
+			// // d3.selectAll(".g-onLoad_A").classed('hidden', true);
+			// d3.selectAll("#s2_A").classed('hidden', true);
+            d3.select("#bgimg1").classed("invisible", false);
 
-			d3.select("#yaleBuildings").classed('hidden', true)
-			d3.select("#campusBubble").classed('invisible', false)
-			d3.select(".ai2html-container").style("transform", "scale(5.0) translate(3%, 4%)");
+			// d3.select(".ai2html-container").style("transform", "scale(5.0) translate(3%, 4%)");
+		})
+
+        d3.select("#step-two").on('stepin',function(e) {
+            d3.select("#bgimg1").classed("invisible", false);
+        })
+
+
+        d3.select("#step-two").on('stepout',function(e) {
+			if (e.detail.direction == 'down') {
+
+				// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
+				d3.select("#bgimg1").classed("invisible", true);
+				// d3.selectAll("#s0_A").classed('hidden', true);
+				d3.select("#scrolly").style("background-color", "#ebd999");
+				// d3.selectAll(".g-onLoad_A").classed('hidden', false);
+			}
 		})
 
     </script>
