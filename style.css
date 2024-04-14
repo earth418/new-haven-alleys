@@ -5,9 +5,10 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: "Lato";
+    /* font-family: "Lato"; */
+    font-family: "Platypi";
     /* font-family: "Noto Sans"; */
-    font-family: "Bitter";
+    /* font-family: "Bitter"; */
     background-color: #ebd999;
 
     transition: visibility 0.2s;
@@ -87,37 +88,35 @@ hr{
 
     transition: margin 2s 0s;
 
-    /* @media only screen and (min-width: 700px) {
+    @media only screen and (min-width: 700px) {
         /* transition: margin 2s 0s; */
-        /* text-align: left; */ /*
+        /* text-align: left; */
         max-width: 32rem;
         margin-left: 5%;
         margin-right: 65%;
-    } */
+    }
 }
   
 h1 {
-    font-family: "Noto Sans";
+    /* font-family: "Noto Sans"; */
+    
     text-align: left;
     font-size: 4.0rem;
     margin-bottom: 0;
+    padding-left: 10px;
     /* margin-top: 5%; */
 
     z-index:50; 
     position:absolute;
     top:30%;
     /* bottom:50%; */
-    color: #c05200;
-    text-shadow: #000 2px 2px;
-    /* right:50%; */
+    /* color: #c05200; */
+    color: #bfabcc;
+    text-shadow: #bfabcc 1px 0 10px,
+                 #000000 1px 0 5px,
+                 #000000 1px 1px;
 
     @media only screen and (min-width: 700px) {
-        /* text-align: left; */
-        /* margin-left: 2%; */  
-        /* position: sticky; */
-        /* bottom:50%; */
-        /* top:0%; */
-        /* padding-bottom:10%; */
         top:60%;
         font-size: 8.0rem;
     }
@@ -125,15 +124,12 @@ h1 {
 
 
 .step-paragraph {
-    /* margin: 0 auto 2rem auto; */
-    /* margin: 0 auto; */
-    /* left: auto; */
-    /* width: 100%; */
     padding: 1rem;
     text-align: center;
     margin-bottom: 50rem;
     /* background-color: #777; */
-    background-color: rgba(200, 200, 200, 0.4);
+    /* #ff8c00 */
+    background-color: rgba(255, 150, 0, 0.4);
     color: black;
     
     @media only screen and (min-width: 700px) {
@@ -150,18 +146,27 @@ h2 {
     font-size: 2.0rem;
     margin-top: 0;
     margin-bottom: 0;
+    
     padding-bottom: 0;
 }
-
 
 h3 {
     font-family: "Noto Sans";
     text-align: left;
     font-size: 1rem;
     margin-top: 0;
-    margin-left: 0.5vw;
-    padding-top: 0;
-    font-weight: normal;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #bfabcc;
+    text-shadow: #000 2px 2px; /* 0 4px; */
+
+    position:absolute;
+    left:0;
+    z-index:51;
+    bottom:7%;
+    @media only screen and (min-width: 700px) {
+        bottom:-50%;
+    }
 }
 
 .sticky-thing {
@@ -178,6 +183,19 @@ h3 {
     justify-content: center;
     flex-direction: column;
     justify-content: center;
+
+    transition: margin 1.5s 0s, transform 2.5s 0s, visibility 0.5s 0s;
+}
+
+.sticky-thing img {
+    
+    /* transition: opacity 0.5s; */
+    transition: all 0.5s;
+    /* transition: margin 1.5s 0s, transform 2.5s 0s, visibility 0.5s 0s; */
+    @media only screen and (min-width: 700px) {
+        margin-left: auto;
+        margin-right: 10%;
+    }
 }
 
 .step {
@@ -189,8 +207,8 @@ h3 {
 
     
     @media only screen and (min-width: 700px) {
-        /* text-align: left; */
-        /* margin-left: 2%; */
+        text-align: left;
+        margin-left: 2%;
         margin-bottom: 25rem;
     }
       
@@ -199,18 +217,6 @@ h3 {
 .step a,
 #intro-paragraph a {
     color: #58c;
-}
-
-.ai2html-container {
-    transition: margin 1.5s 0s, transform 2.5s 0s;
-
-    @media only screen and (min-width: 700px) {
-        margin-left: 0%;
-    }
-
-    /* transform-origin: 0px; */
-    /* transition-timing-function: cubic-bezier(); */
-    /* transform: scale(4.0) translate(5%, 5%); */
 }
 
 .step p {
@@ -232,13 +238,15 @@ h3 {
 }
 
 .hidden { 
-    /* visibility: hidden;  */
-    opacity: 0%;
+    visibility: hidden; 
+    /* transition: visibility 0.5s; */
+    /* opacity: 0%; */
 }
 
 .invisible { 
-    visibility: hidden; 
-    /* opacity: 0%; */
+    /* visibility: hidden;  */
+    transition: opacity 0.5s;
+    opacity: 0%;
 }
 
   /* When it's less than 700 pixels wide, do normal scrollytelling */
