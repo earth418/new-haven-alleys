@@ -20,7 +20,7 @@
     <div>
         <!-- <h1 id="">New Haven's Alleys, Pathways, and Thoroughfares</h1> -->
         <h1>New Haven's <br> Invisible Street Grid</h1>
-        <h2>The little alleys that are more important than you think</h2>
+        <!-- <h2>The little alleys that are more important than you think</h2> -->
         <video width="100%" autoplay loop style="position:sticky;z-index:1;">
             <source src="alley intro.mp4">
             
@@ -31,7 +31,7 @@
       <section id="scrolly">
 
         <div class="sticky-thing">
-            <img id="bgimg1" src="new_haven_road_map.png" width="50%">
+            <img id="bgimg1" src="new_haven_road_map_1.png" width="50%">
               <!--  put something here???? -->
         </div>
 
@@ -63,12 +63,12 @@
             
             <div class="step" id="step-one">
                 <p>
-                    ...you get something that looks like <b>this</b>. There's an <i>entire</i> 
-                    navigable network of invisible paths that traverse and snake through the city.
+                    ...you get something that looks like <b>this</b>. There's an entire 
+                    navigable network of <span style="font-weight: bold; color:#a93400;">invisible paths</span> that traverse and snake through the city.
                 </p>
             </div>
                 
-            <div class="step" id="step-two" style="padding-bottom:10rem;opacity:0.1%;">
+            <div class="step" id="step-two" style="padding-bottom:5rem;margin-bottom:5rem;opacity:0.1%;">
                 <br>
             </div>
 
@@ -82,14 +82,26 @@
         <div class="step-paragraph">
 
             <p style="margin-bottom: 2rem;">
-                That's a lot of new paths-- it really is like 
+                That's a lot of <span style="color:#a93400; font-weight: bold;">new paths</span>-- it really is like 
                 a whole new street grid.
 
                 What are all of these?
             <!-- Something like this: -->
             </p>
-        
-            <br>
+        </div>
+
+        <div class="step-paragraph">
+
+            <p>They're all <b>alleys</b>. <br>
+                    
+                Merriam-Webster defines an alley as "a walk 
+                bordered by trees or bushes; a narrow street" <br><br>
+                Elihu Rubin, Yale Professor of Urban Studies, describes them
+                 as "an urban morphological quality" often 
+                 for access to garages and trash pickup. <br><br>
+                This isn't to mention 
+                 
+            </p>
         </div>
 
 
@@ -107,7 +119,7 @@
 
             <div class="step" id="step-three"> 
                 <!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
-                <p><b>Let's start with a simple question -- what is an alley?</b> <br><br>
+                <p>Alleys take a lot of shapes -- and <br>
                     
                 </p>
             </div>
@@ -162,20 +174,6 @@
 	  // Code that runs when the website loads
 	  document.addEventListener("DOMContentLoaded", function(e) {
         d3.select(".sticky-thing").select("img").classed("invisible", true);
-
-      	// d3.selectAll("#yaleBuildings, #yaleBubble, #s0_A, #s1_A, #s2_A,\
-		//  #s3_A, #s4_A, .g-s2_A, #s6_A, #s7_A, #s11_A, #s9_A, #s10_A, #s13_A, #s15_A").classed('hidden', true);
-		// 	d3.select("#campusBubble").classed('invisible', true);
-		
-		//  d3.selectAll("#yaleBuildings, #yaleBubble, #s0_A, #s1_A, #s2_A,\
-		//  #s3_A, #s4_A, .g-s2_A, #s6_A, #s7_A, #s11_A, #s9_A, #s10_A, #s13_A, #s15_A").style('transition', 'opacity 0.5s');
-		
-		//  d3.selectAll("#setTo40PercentOpac1, #setTo40PercentOpac2,\
-		// 	#setTo40PercentOpac3, #setTo40PercentOpac4, #setTo40PercentOpac5").style("fill-opacity", "40%");
-		
-		// d3.selectAll("#opac50_1, opac50_2").style("fill-opacity", "50%");
-		
-		// d3.selectAll(".g-onLoad_A").classed('hidden', true);
     });
 
 		// for debugging
@@ -191,10 +189,10 @@
 		d3.select("#step-zero").on('stepin',function(e) {
 			// d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
 			d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-			d3.selectAll("#s0_A").classed('hidden', false);
+			// d3.selectAll("#s0_A").classed('hidden', false);
 
             d3.select("#bgimg1").classed("invisible", false);
-            d3.select("#bgimg1").style("margin-right", "10%");
+            d3.select("#bgimg1").style("margin-right", "1%");
             // d3.select(".sticky-thing").style("height", false);
 
 			// d3.select("#bgimg1").style("margin-left", (window.innerWidth > 700) ? "auto" : "0");
@@ -231,6 +229,7 @@
 
         d3.select("#step-two").on('stepin',function(e) {
             d3.select("#bgimg1").classed("invisible", false);
+            d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
         })
 
 

@@ -63,8 +63,7 @@ hr{
     border: black;
 
     width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 
     /* If on desktop*/
     @media only screen and (min-width: 700px) {
@@ -76,8 +75,12 @@ hr{
     position: relative;
     padding: 1rem;
     margin-bottom: 0;
+    margin: 0;
     transition: background-color 1s 0s;
     /* background-color: #0; */
+    @media only screen and (min-width: 700px) {
+        padding: 0;
+    }
   }
 
 .scrolly-overlay {
@@ -125,8 +128,14 @@ h1 {
 
 .step-paragraph {
     padding: 1rem;
+    padding-top:0;
     text-align: center;
-    margin-bottom: 50rem;
+    width: 70%;
+    
+    margin-top: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 33rem;
     /* background-color: #777; */
     /* #ff8c00 */
     background-color: rgba(255, 150, 0, 0.4);
@@ -189,7 +198,7 @@ h3 {
 
 #bgimg1 {
     
-    /* transition: opacity 0.5s; */
+    /* transition: opacity 0.5s 0.5; */
     transition: all 0.5s;
     margin-left: auto;
     margin-right: auto;
@@ -198,8 +207,9 @@ h3 {
     /* transition: margin 1.5s 0s, transform 2.5s 0s, visibility 0.5s 0s; */
     @media only screen and (min-width: 700px) {
         margin-left: auto;
-        margin-right: 10%;
-        width: 50%;
+        margin-right: 1%;
+        padding-right: 0;
+        width: 56%;
     }
 }
 
@@ -243,9 +253,7 @@ h3 {
 }
 
 .hidden { 
-    visibility: hidden; 
-    /* transition: visibility 0.5s; */
-    /* opacity: 0%; */
+    visibility: hidden;
 }
 
 .invisible { 
