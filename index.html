@@ -30,6 +30,63 @@
 
       <section id="scrolly">
 
+        <style>
+            #quote-bubbles {
+                width: 100%;
+                position:absolute;
+                z-index:5;
+                top:-2%;
+                @media only screen and (min-width: 700px) {
+                    top: -13%;
+                }
+            }
+            
+            .quote-bubble {
+                width: 25%;
+                margin-top: 5%;
+                padding: 5%;
+                margin-left: 10%;
+
+                /* height: 50%; */
+                text-align: center;
+                /* border-radius: 50%; */
+                background-image: url("cairo_1.jpg");
+                background-color: hsl(209, 62%, 75%, 50%);
+
+                /* @media only screen and (min-width: 700px) {
+                    padding: 2%;
+                    margin-top: 2%;
+                } */
+            }
+            
+            .right {
+                margin-left: auto;
+                margin-right: 10%;
+            }
+        </style>
+
+        <div id="quote-bubbles">
+            <p class="quote-bubble">
+                "it's quicker!"
+            </p>
+            <p class="quote-bubble right">
+                "I just like it!"
+            </p>
+            <p class="quote-bubble">
+                "My friends do it"
+            </p>
+            <p class="quote-bubble right">
+                "I like the coziness"
+            </p>
+            <p class="quote-bubble">
+                "I just like it!"
+            </p>
+            <p class="quote-bubble right">
+                "I just like it!"
+            </p>
+            
+        </div>
+
         <div class="sticky-thing">
             <img id="bgimg1" src="new_haven_road_map_1.png" width="50%">
               <!--  put something here???? -->
@@ -40,31 +97,43 @@
                 When you think about how to get around in a city, what usually comes to mind is a map of streets and 
                 sidewalks forming islands -- city blocks -- of buildings, in a
                 sea of car and pedestrian traffic, streets, and lanes.
+                <br><br>
+                But some of the most iconic and charming cities
+                around the world are known for their alleyways.
+
+                <div style="display:flex; width: 100%; justify-content: space-around;">
+                    <div>
+                        <img src="italy_alley.jpg" width="80%"><br>
+                        Corniglia, Italy
+                    </div>
+                    <div>
+                        <img src="cordoba_alley.jpg" width="80%"><br>
+                        Cordoba, Spain
+                    </div>
+                    <div>
+                        <img src="cairo_2.jpg" width="80%"><br>
+                        Cairo, Egypt
+                    </div>
+                </div>
             </p>
-            <!-- <p style="text-align:center;">
-                But there are more ways to get around.
-            </p> -->
-            
-            <br>
         </div>
-        
+
         <div class="scrolly-overlay">
             
             <div class="step" id="step-zero">
-                <p><span style="font-weight: bold;">
-
-                The map of New Haven you'd usually see is something like this.
-                </span>
-                    <br><br>
-                But there's an element of the city's transortation that's 
-                not here at all. And when you include it...
+                <!-- <p> <span style="font-weight: bold;"> -->
+                <p>
+                <b>New Haven</b> is a small city, known for a lot of things — 
+                (A)pizza, Yale, Elm trees — 
+                but alleys are not usually one of them.
                 </p>
             </div>
             
             <div class="step" id="step-one">
                 <p>
-                    ...you get something that looks like <b>this</b>. There's an entire 
-                    navigable network of <span style="font-weight: bold; color:#a93400;">invisible paths</span> that traverse and snake through the city.
+                    But New Haven's alleys, while lesser-known, form an entire 
+                    navigable network of <span style="font-weight: bold; color:#a93400;">invisible 
+                        paths</span>, traversing and snaking through the city.
                 </p>
             </div>
                 
@@ -78,29 +147,24 @@
                 </p>
             </div> -->
         </div>
-        
-        <div class="step-paragraph">
-
-            <p style="margin-bottom: 2rem;">
-                That's a lot of <span style="color:#a93400; font-weight: bold;">new paths</span>-- it really is like 
-                a whole new street grid.
-
-                What are all of these?
-            <!-- Something like this: -->
-            </p>
-        </div>
 
         <div class="step-paragraph">
 
-            <p>They're all <b>alleys</b>. <br>
-                    
+            <p>
                 Merriam-Webster defines an alley as "a walk 
                 bordered by trees or bushes; a narrow street" <br><br>
                 Elihu Rubin, Yale Professor of Urban Studies, describes them
                  as "an urban morphological quality" often 
                  for access to garages and trash pickup. <br><br>
-                This isn't to mention 
-                 
+            </p>
+        </div>
+
+        <div class="step-paragraph">
+
+            <p>
+                But by some metric, these places are all going to be 
+                considered alleys:
+                <br><br>
             </p>
         </div>
 
@@ -209,6 +273,7 @@
 
 				// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
 				d3.select("#bgimg1").classed("invisible", true);
+				// d3.select("#bgimg1").attr("src", "new_haven_road_map_1.png");
 				// d3.selectAll("#s0_A").classed('hidden', true);
 				d3.select("#scrolly").style("background-color", "#ebd999");
 				// d3.selectAll(".g-onLoad_A").classed('hidden', false);

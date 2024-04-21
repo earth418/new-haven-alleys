@@ -64,6 +64,7 @@ hr{
 
     width: 75%;
     margin: auto;
+    margin-bottom: 0rem;
 
     /* If on desktop*/
     @media only screen and (min-width: 700px) {
