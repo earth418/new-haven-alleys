@@ -162,28 +162,43 @@
         <div class="step-paragraph">
 
             <p>
-                But by some metric, these places are all going to be 
+                But these places are all going to be 
                 considered alleys:
                 <br><br>
+                <div style="display:flex; width: 100%; justify-content: space-around;">
+                    <div>
+                        <img src="italy_alley.jpg" width="80%"><br>
+                        Wall St
+                    </div>
+                    <div>
+                        <img src="cordoba_alley.jpg" width="80%"><br>
+                        Federal alley
+                    </div>
+                    <div>
+                        <img src="cairo_2.jpg" width="80%"><br>
+                        Pitkin plaza
+                    </div>
+                </div>
+            </p>
+
+            <p> 
+                And while these might not be "tree-shrouded walks", have garage or trash access,
+                 or even be particularly narorw, the simple reason for their
+                inclusion is that sometimes places just have the <i>feel</i> of an alley.
             </p>
         </div>
 
 
         <div class="scrolly-overlay">
-            <!-- <style>
-            #step-nine span,
-			#step-ten span {
-                text-shadow:
-				-1px -1px 0 #000,
-				1px -1px 0 #000,
-				-1px 1px 0 #000,
-				1px 1px 0 #000;
-			}
-            </style> -->
 
             <div class="step" id="step-three"> 
                 <!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
-                <p>Alleys take a lot of shapes -- and <br>
+                <p>In line with this fuzzy definition, <b>New Haven's Alleys come in many shapes and sizes,</b>
+                    
+                    some of which are <span>wide</span> and can even fit cars and trucks, 
+                    
+                    others require a little shimmying to fit through.
+                    <br>
                     
                 </p>
             </div>
@@ -191,31 +206,76 @@
             <div class="step" id="step-four"> 
                 <!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
                 <p>
-                    <b>For example,</b>
-                    <br>
-                    these are all spaces I'm considering "alleys:"
+                    <b>They're used in a lot of different ways, too,</b>
                     
-                    *picture* *picture* *picture*
-                    <!--  -->
+                    from 
+                    <span>
+                        walking through
+                    </span>
+                    to
+                    <span>
+                        shopping and dining,
+                    </span>
+                    <span>
+                        residential access,
+                    </span>
+                    or even this one that...
+                    <span>
+                        spreads religion? *label it on map "missionary alley*
+                    </span>
+
+                    <br><br>
+                    <span style="font-weight:normal; font-size: 10px; text-align: left;">
+                        *not its real name
+                    </span>
                 </p>
             </div>
             
+            
             <div class="step" id="step-five"> 
-                <!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
                 <p>
-                    <b>So what do the alleys in New Haven look like?</b>
-                    <br>
-                    map of alleys
+                    And every so often, an alley can truly show itself off, 
+                    become something truly exceptional, and <i>blossom</i> --
+
+                    Like New Haven's very own <b>Court Street</b>, a quaint 
+                    alley in Wooster Square bounded by townhouses. Usually quiet,
+                    on Sunday, April 14th, the alley was bustling with activity for
+                    <b>New Haven's Cherry Blossom festival.</b>
+                </p>
+            </div>
+            
+            <div class="step" id="step-six"> 
+                <p>
+                    All the differences between New Haven's alleyways
+                    leads to some being used more than others.
                 </p>
             </div>
 
+            <div class="step" id="step-seven"> 
+                <p>
+                    But in almost every case, <span>public</span>
+                    alleys get far more use than 
+                    <span>private</span> alleys.
+                </p>
+            </div>
+            
+            <div class="step" id="step-seven"> 
+                <p>
+                    But in almost every case, <span>public</span>
+                    alleys get far more use than 
+                    <span>private</span> alleys.
+                </p>
+            </div>
+            
 
-		  <div class="step" id="step-fifteen" style="margin-bottom: 100rem;"> 
-			<!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
-            <p>
+
+
+            <div class="step" id="step-fifteen" style="margin-bottom: 100rem;"> 
+                <!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
+                <p>
 				<!-- There are lovely places to eat and shop in <b style="color:#163b72">Westville, Wooster Square, Fair Haven, East Rock, and up Dixwell Ave.</b> <br>
 				There are lovely city parks not far from campus, like <b  style="color:#163b72">Edgewood park, East Rock Park, and West Rock Park.</b><br>
-				 -->
+            -->
 
 			</p>
           </div>
@@ -306,6 +366,41 @@
 				// d3.selectAll("#s0_A").classed('hidden', true);
 				d3.select("#scrolly").style("background-color", "#ebd999");
 				// d3.selectAll(".g-onLoad_A").classed('hidden', false);
+			}
+		});
+
+
+        // SECOND ITERATION OF THE WHOLE SCROLLY THING
+
+        		//   Entering Step Zero
+		d3.select("#step-three").on('stepin',function(e) {
+			// d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
+			d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+			// d3.selectAll("#s0_A").classed('hidden', false);
+
+            d3.select("#bgimg1").classed("invisible", false);
+            d3.select("#bgimg1").style("margin-right", "1%");
+            // d3.select(".sticky-thing").style("height", false);
+
+			// d3.select("#bgimg1").style("margin-left", (window.innerWidth > 700) ? "auto" : "0");
+			// d3.select("#bgimg1").style("margin-right", (window.innerWidth > 700) ? "10%" : "auto");
+			//   d3.selectAll("#s0_A").classed('hidden', true)
+			// d3.select(".ai2html-container").style("transform", "scale(1.0)");
+			d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
+		})
+
+		// exiting zero
+		d3.select("#step-three").on('stepout',function(e) {
+			if (e.detail.direction == 'up') {
+				d3.select("#campusBubble").classed('invisible', true);
+
+				// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
+				d3.select("#bgimg1").classed("invisible", true);
+				// d3.select("#bgimg1").attr("src", "new_haven_road_map_1.png");
+				// d3.selectAll("#s0_A").classed('hidden', true);
+				d3.select("#scrolly").style("background-color", "#ebd999");
+				// d3.selectAll(".g-onLoad_A").classed('hidden', false);
+                // d3.select(".sticky-thing").style("height", "0px");
 			}
 		})
 
