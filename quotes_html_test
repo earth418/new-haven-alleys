@@ -1,0 +1,64 @@
+        <style>
+            #quote-bubbles {
+                width: 100%;
+                position:absolute;
+                z-index:5;
+                top:0%;
+                @media only screen and (min-width: 700px) {
+                    top: -8%;
+                }
+            }
+            
+            .quote-bubble {
+                width: 100%;
+                /* margin-top: 5%; */
+                /* padding: 5%; */
+                /* margin-left: 10%; */
+                /* margin-right:auto; */
+
+                z-index:15;
+                position:relative;
+                text-align: center;
+                /* height: 50%; */
+                /* border-radius: 50%; */
+                /* background-image: url("test_bubble.svg"); */
+                background-color: hsl(209, 62%, 75%, 0%);
+                /* z-index: 10; */
+
+                /* @media only screen and (min-width: 700px) {
+                    padding: 2%;
+                    margin-top: 2%;
+                } */
+            }
+
+            .quote_img {
+                position:relative;
+                width: 50%;
+                top:80px;
+                margin:10%;
+            }
+            
+            .right {
+                margin-left: auto;
+                margin-right: 10%;
+                /* align-content: right; */
+            }
+        </style>
+
+        <div id="quote-bubbles">
+            <div style="width:50%; margin:0;">
+                <img class="quote_img" src="quote_bubble.svg" style="transform:scale(-1,1);">
+                <p class="quote-bubble">"it's quicker!"</p>
+            </div>
+            <div style="width:50%;" class="right">
+                <img class="quote_img" src="quote_bubble.svg" style="margin-left:60%;">
+                <p class="quote-bubble">"it's quicker!"</p>
+            </div>
+            <div style="width:50%;">
+                <img class="quote_img" src="quote_bubble.svg" style="transform:scale(-1,1);">
+                <p class="quote-bubble">"it's quicker!"</p>
+            </div>
+            <div style="width:50%;" class="right">
+                <img class="quote_img" src="quote_bubble.svg" style="margin-left:50%;">
+                <p class="quote-bubble">"it's quicker!"</p>
+            </div>
