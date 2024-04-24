@@ -1200,6 +1200,29 @@
 
         });
 
+
+        ///// last one!!!
+
+        d3.select("#step-eleven").on('stepin',function(e) {
+            // d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
+			d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+			// d3.selectAll("#s0_A").classed('hidden', false);
+            
+            // d3.select("#s3_A").classed("invisible", false);
+            // d3.select("#s5_A").classed("invisible", false);
+
+            d3.select(".ai2html-container").classed("invisible", false);
+            d3.select(".ai2html-container").style("margin-right", "1%");
+		})
+        
+        d3.select("#step-eleven").on('stepout',function(e) {
+			if (e.detail.direction == 'down') {
+				d3.select(".ai2html-container").classed("invisible", true);
+                d3.select("#s1_A").classed("invisible", true);
+				d3.select("#scrolly").style("background-color", "#ebd999");
+			}
+		});
+
         d3.select("#step-final").on('stepin', function(e) {
             d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
             
