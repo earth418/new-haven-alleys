@@ -1024,8 +1024,17 @@
             <br>
             <br>
 
-            <video>
-                <source src="court st quiet.mp4" width="10%">
+            <style>
+                #outro-video {
+                    width: 100%;
+                    @media only screen and (min-width: 700px) {
+                        width: 75%;
+                    }
+                }
+            </style>
+
+            <video id="outro-video" autoplay loop>
+                <source src="court st quiet.mp4">
             </video>
         </div>
 
