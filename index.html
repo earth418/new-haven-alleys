@@ -36,35 +36,43 @@
     <style>
         #quote-bubbles {
             width: 100%;
-            position:absolute;
+            /* position:absolute; */
             z-index:5;
-            top:100%;
-            @media only screen and (min-width: 700px) {
+            /* top:100%; */
+            /* @media only screen and (min-width: 700px) {
                 top: 120vmax;
-            }
+            } */
         }
         
         .quote-bubble {
+            display:block;
             width: 25%;
             margin-top: 5%;
-            padding: 5%;
+            padding: 0 10%;
             margin-left: 10%;
-            font-size: smaller;
+            font-size: small;
             
 
             /* height: 50%; */
-            text-align: center;
+            /* text-align: center; */
             /* border-radius: 50%; */
             background-image: url("quote_bubble_flip.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-color: hsl(209, 62%, 75%, 0%);
 
-            /* @media only screen and (min-width: 700px) {
-                padding: 2%;
-                margin-top: 2%;
-            } */
+            @media only screen and (min-width: 700px) {
+                /* padding: 2%; */
+                /* margin-top: 2%; */
+                font-size: large;
+            }
         }
+
+        .quote-text {
+            width: 100%;
+            padding: 0;
+        }
+
         
         .right {
             margin-left: auto;
@@ -80,7 +88,7 @@
         }
     </style>
 
-    <div id="quote-bubbles">
+    <!-- <div id="quote-bubbles">
         <p class="quote-bubble">
             "It's much faster" <br>
             <span class="quote-subtext">Yale-International</span>
@@ -88,15 +96,15 @@
         <p class="quote-bubble right">
             "The place I'm going is right here" <br>
             <span class="quote-subtext">Yale-International</span>
-        </p>
+        </p> -->
         <!-- <p class="quote-bubble">
             "Searching for a bumblebee on a purple flower" <br>
             <span class="quote-subtext">Court St</span>
         </p> -->
-        <p class="quote-bubble">
+        <!-- <p class="quote-bubble">
             "For the speed!" <br>
             <span class="quote-subtext">Yale-International</span>
-        </p>
+        </p> -->
         <!-- <p class="quote-bubble">
             "I just like it!"
         </p>
@@ -104,7 +112,7 @@
             "I just like it!"
         </p> -->
         
-    </div>
+    <!-- </div> -->
 
     <section id="scrolly">
 
@@ -694,21 +702,45 @@
             </div>
         </div>
 
-        <div class="scrolly-overlay" style="margin-top:-30rem;">
-            <div class="step" id="step-intro">
+        <div class="scrolly-overlay" style="margin-top:-30rem; 
+        margin-right: auto; margin-left:auto; max-width: 80%;">
+            <div class="step" id="step-intro" style="margin-bottom:1rem;">
                 <p>
                     That was Yale-International alley. Or, at least, 
-                    that's what I'm calling it, since
+                    that's what I'm calling it, since...
                 </p>
             </div>
 
-            <div style="margin-right:0; width: 50%;">
-                <img src="img/yale-international.jpg">
+            <div style="margin-right:0; margin-top:1rem; margin-bottom:2rem; width: 100%; text-align: center;">
+                <img width="50%" src="img/yale-international_annotated.jpg">
             </div>
 
             <div class="step" id="step-intro-2">
                 <p>
-                    it lies right here, right next to the Yale-International building.
+                    it lies right here, right next to the Yale-International Center. And it's 
+                    a very high-traffic alleyway.
+                </p>
+            </div>
+
+            <div id="quote-bubbles">
+                <div class="quote-bubble">
+                    <p class="quote-text">"It's much faster"</p>
+                </div>
+                <div class="quote-bubble right">
+                    <p class="quote-text">"The place I'm going is right here"</p>
+                </div>
+                <div class="quote-bubble">
+                    <p class="quote-text">"For the speed!"</p>
+                </div>
+                <!-- <p class="quote-bubble">
+                    "Searching for a bumblebee on a purple flower" <br>
+                    <span class="quote-subtext">Court St</span>
+                </p> -->
+            </div>
+
+            <div class="step" id="step-intro-3">
+                <p>
+                    Apparently it's a pretty good shortcut.
                 </p>
             </div>
         </div>
@@ -748,15 +780,15 @@
 
                 <div style="display:flex; width: 100%; justify-content: space-around;">
                     <div>
-                        <img src="burgerway_alley.jpg" width="80%"><br>
+                        <img src="img/burgerway_alley.jpg" width="80%"><br>
                         <!-- Corniglia, Italy -->
                     </div>
                     <div>
-                        <img src="cordoba_alley.jpg" width="80%"><br>
+                        <img src="img/some_alley.jpg" width="80%"><br>
                         <!-- Cordoba, Spain -->
                     </div>
                     <div>
-                        <img src="cairo_2.jpg" width="80%"><br>
+                        <img src="img/yale-security.jpg" width="80%"><br>
                         <!-- Cairo, Egypt -->
                     </div>
                 </div>
@@ -773,15 +805,15 @@
             <div class="step" id="step-zero">
                 <!-- <p> <span style="font-weight: bold;"> -->
                 <p>
-                <b>New Haven</b> is a small city, known for a lot of things — 
-                (A)pizza, Yale, Elm trees — 
+                <b>New Haven</b> is known for a lot — 
+                (A)pizza, Yale, its Elm trees — 
                 but alleys are not usually one of them.
                 </p>
             </div>
             
             <div class="step" id="step-one">
                 <p>
-                    But New Haven's alleys, while lesser-known, form an entire 
+                    But these alleys form an entire 
                     navigable network of <span style="font-weight: bold; color:#a93400;">invisible 
                         paths</span>, traversing and snaking through the city.
                 </p>
@@ -910,6 +942,7 @@
                     others are <span style="color:#65a98f">narrow</span> and 
                     might require a little shimmying to fit through... <br>
                 </p>
+            </div>
 
             <div class="step" id="step-neither">
                 <p>
@@ -930,11 +963,15 @@
 
 
         <div class="sticky-thing">
-            <div style="width: 39%; margin-left:1%; margin-bottom:auto;
-                margin-top:1%; background-color: red;">
+            <div style="width: 59%; margin-right:0%; margin-left:auto; margin-bottom:auto;
+                margin-top:0%; background-color: red; padding:0.5rem;">
                     <p style="font-size: 30px; margin:auto; margin-left:10%;">
-                        Court St
+                        COURT ST
                     </p>
+            </div>
+            <div style="width: 59%; margin-right:0%; margin-left:auto; margin-bottom:auto;
+            margin-top:0%; padding:0.5rem; text-align: center;">
+                <img src="img/court st festival.gif">
             </div>
         </div>
 
@@ -1076,19 +1113,6 @@
             </video>
         </div>
 
- 
-
-
-            <!-- <div class="step" id="step-fifteen" style="margin-bottom: 100rem;"> 
-                <!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
-                <!-- <p> -->
-				<!-- There are lovely places to eat and shop in <b style="color:#163b72">Westville, Wooster Square, Fair Haven, East Rock, and up Dixwell Ave.</b> <br>
-				There are lovely city parks not far from campus, like <b  style="color:#163b72">Edgewood park, East Rock Park, and West Rock Park.</b><br>
-            -->
-
-			<!-- </p> -->
-          <!-- </div> --> -->
-
         </div>
       </section>
 
@@ -1116,6 +1140,25 @@
 		// document.addEventListener("mousemove", (e) => {
 		// 	console.log("(" + e.clientX + ", " + e.clientY + ")");
 		// });
+
+        // introduction
+
+        d3.select("#step-intro").on('stepin', function(e) {
+            d3.select("body").style("background-color", "#96bfe6"); // #81e8bc
+        });
+        d3.select("#step-intro").on('stepout', function(e) {
+            if (e.detail.direction == 'up')
+                d3.select("body").style("background-color", "#ebd999"); // #81e8bc
+        });
+
+        d3.select("#step-intro-3").on('stepin', function(e) {
+            d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+        });
+        d3.select("#step-intro-3").on('stepout', function(e) {
+            if (e.detail.direction == 'down')
+                d3.select("#scrolly").style("background-color", "#ebd999"); // #81e8bc
+        });
+
 
 		/// STEP ZERO
 

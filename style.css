@@ -11,7 +11,7 @@ body {
     /* font-family: "Bitter"; */
     background-color: #ebd999;
 
-    transition: visibility 0.2s;
+    transition: visibility 0.2s, background-color 1s 0s;
 }
 
 #cover-img {
@@ -162,7 +162,7 @@ h2 {
 
     z-index:50; 
     position:absolute;
-    top:50%;
+    top:70%;
     /* bottom:50%; */
     /* color: #c05200; */
     color: #bfabcc;
