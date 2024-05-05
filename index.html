@@ -932,16 +932,33 @@
                 </p>
             </div>
             
-            <div class="step" id="step-four"> 
+            <div class="step" id="step-four-a"> 
                 <p>
-                    alley < alley < alley --> alley alley alley
+                    They're quiet,
                 </p>
+            </div>
+            <div class="step" id="step-four-b"> 
+                <p>
+                    opportunities for public art,
+                </p>
+            </div>
+            <div class="step" id="step-four-c"> 
+                <p>
+                    often contain greenery.
+                </p>
+            </div>
+            <div class="step" id="step-four-d"> 
+                <p>
+                    and places to socialize.
+                </p>
+
+                
             </div>
             
             <div class="step" id="step-five"> 
                 <p>
-                    Some alleys can truly show itself off, 
-                    become something truly exceptional, and <i>blossom</i>...
+                    And some days, an alley can truly show itself off, 
+                    become truly exceptional, and <i>blossom</i>...
                 </p>
             </div>
         </div>
@@ -985,13 +1002,24 @@
                 </p>
             </div>
 
+        </div>
+        <div class="sticky-thing" id="wooster-locked" style="width: 100%;">
+            <img src="img/wooster_locked.jpg" width="50%" style="margin-left:auto; margin-right:5%;">
+        </div>
+        <div class="scrolly-overlay">
             <div class="step" id="step-eight">
                 <p>
                     <b>No matter how beautiful they looked from the outside,</b>
-                    <img src="img/wooster_locked.jpg" width="100%">
+                    <!-- <img src="img/wooster_locked.jpg" width="100%"> -->
                 </p>
             </div>
+        </div>
+        
+        <div class="sticky-thing">
+            <img src="img/wooster_gate.jpg" width="50%" style="margin-left:auto;">
+        </div>
 
+        <div class="scrolly-overlay">
             <div class="step" id="step-nine">
                 <p>
                     Their entrances were <b>locked behind gates.</b>
@@ -1268,8 +1296,8 @@
     //         d3.select("#scrolly").style("background-color", "#ebd999");
 
     //     });
-
-    // </script>
+    </script>
+    
 
 <script>
     const scroller = scrollama();
@@ -1294,29 +1322,6 @@
       		const event = new CustomEvent('stepprogress', { detail: { progress: progress } })
 			element.dispatchEvent(event);
    		});
-
-	// const scroller2 = scrollama();
-
-	// scroller2
-	// .setup({
-	// 		step: "#scrolly .scrolly-overlay .step",
-	// 		offset: 0.75,
-	// 		debug: false,
-    //   progress: true,
-    //   threshold: 1,
-	// 	})
-	// 	.onStepEnter(function({ element, index, direction}) {
-	// 		const event = new CustomEvent('stepin', { detail: { direction: direction } })
-	// 		element.dispatchEvent(event);
-	// 	})
-	// 	.onStepExit(function({ element, index, direction }) {
-	// 		const event = new CustomEvent('stepout', { detail: { direction: direction } })
-	// 		element.dispatchEvent(event);
-	// 	})
-    // .onStepProgress(function({ element, index, progress}) {
-    //   const event = new CustomEvent('stepprogress', { detail: { progress: progress } })
-	// 		element.dispatchEvent(event);
-    // });
 
 	window.addEventListener("resize", scroller.resize);
     </script>

@@ -146,6 +146,12 @@
             d3.select(".ai2html").style("transform", "scale(1.0)");
         });
 
+        d3.select("#step-four").on('stepin', function(e) {
+            d3.selectAll("#s5_A").classed('invisible', true);
+            d3.select(".ai2html").style("transform", "scale(1.0)");
+        });
+
+
         d3.select("#step-five").on('stepin',function(e) {
             d3.selectAll("#s5_A").classed('invisible', false);
             d3.select(".ai2html-container").classed("invisible", false);
@@ -161,6 +167,13 @@
             d3.select(".ai2html").style("transform", "scale(1.0) translate(0.0,0.0)");
 
         });
+
+        d3.select("#step-nine").on('stepin', function(e) {
+            d3.select("#wooster-locked").classed("sticky-thing", false);
+            d3.select("#wooster-locked").classed("sticky-thing-absolute", true);
+        });
+
+
 
 
         ///// last one!!!

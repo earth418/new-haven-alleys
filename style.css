@@ -247,6 +247,23 @@ h3 {
     transition: margin 1.5s 0s, transform 2.5s 0s, visibility 0.5s 0s;
 }
 
+.sticky-thing-absolute {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 0;
+    top: 0;
+    height: 100vh;
+    /* Center everything inside */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: margin 1.5s 0s, transform 2.5s 0s, visibility 0.5s 0s;
+}
+
 #bgimg1 {
     
     /* transition: opacity 0.5s 0.5; */
