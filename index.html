@@ -26,7 +26,7 @@
         <!-- <h1 id="">New Haven's Alleys, Pathways, and Thoroughfares</h1> -->
         <h1>The invisible streets <br> of New Haven</h1>
         <h2>Exploring the alleys of the Elm City</h2>
-        <video width="100%" autoplay loop style="position:sticky;z-index:1;">
+        <video width="100%" autoplay loop muted style="position:sticky;z-index:1;">
             <source src="alley intro.mp4">
             
         </video>
@@ -46,10 +46,12 @@
         
         .quote-bubble {
             display:block;
-            width: 25%;
-            margin-top: 5%;
-            padding: 0 10%;
-            margin-left: 10%;
+            width: 16%;
+            margin-top: 0%;
+            /* padding-bottom: 100%; */
+            padding: 2%;
+            aspect-ratio: 3/2;
+            margin-left: 20%;
             font-size: small;
             
 
@@ -61,22 +63,29 @@
             background-size: 100% 100%;
             background-color: hsl(209, 62%, 75%, 0%);
 
-            @media only screen and (min-width: 700px) {
+            /* @media only screen and (min-aspect-ratio: 7/5) {
+                /* padding: 2%; */
+                /* margin-top: 2%; */
+                /* font-size: large;
+            }  */
+        }
+
+        .quote-text {
+            width: 100%;
+            padding: 0;
+            font-size: small;
+
+            @media only screen and (min-aspect-ratio: 7/5) {
                 /* padding: 2%; */
                 /* margin-top: 2%; */
                 font-size: large;
             }
         }
 
-        .quote-text {
-            width: 100%;
-            padding: 0;
-        }
-
         
         .right {
             margin-left: auto;
-            margin-right: 10%;
+            margin-right: 20%;
             
             background-image: url("quote_bubble.svg");
         }
@@ -87,32 +96,6 @@
             text-align: left;
         }
     </style>
-
-    <!-- <div id="quote-bubbles">
-        <p class="quote-bubble">
-            "It's much faster" <br>
-            <span class="quote-subtext">Yale-International</span>
-        </p>
-        <p class="quote-bubble right">
-            "The place I'm going is right here" <br>
-            <span class="quote-subtext">Yale-International</span>
-        </p> -->
-        <!-- <p class="quote-bubble">
-            "Searching for a bumblebee on a purple flower" <br>
-            <span class="quote-subtext">Court St</span>
-        </p> -->
-        <!-- <p class="quote-bubble">
-            "For the speed!" <br>
-            <span class="quote-subtext">Yale-International</span>
-        </p> -->
-        <!-- <p class="quote-bubble">
-            "I just like it!"
-        </p>
-        <p class="quote-bubble right">
-            "I just like it!"
-        </p> -->
-        
-    <!-- </div> -->
 
     <section id="scrolly">
 
@@ -702,51 +685,8 @@
             </div>
         </div>
 
-        <div class="scrolly-overlay" style="margin-top:-30rem; 
-        margin-right: auto; margin-left:auto; max-width: 80%;">
-            <div class="step" id="step-intro" style="margin-bottom:1rem;">
-                <p>
-                    That was Yale-International alley. Or, at least, 
-                    that's what I'm calling it, since...
-                </p>
-            </div>
 
-            <div style="margin-right:0; margin-top:1rem; margin-bottom:2rem; width: 100%; text-align: center;">
-                <img width="50%" src="img/yale-international_annotated.jpg">
-            </div>
-
-            <div class="step" id="step-intro-2">
-                <p>
-                    it lies right here, right next to the Yale-International Center. And it's 
-                    a very high-traffic alleyway.
-                </p>
-            </div>
-
-            <div id="quote-bubbles">
-                <div class="quote-bubble">
-                    <p class="quote-text">"It's much faster"</p>
-                </div>
-                <div class="quote-bubble right">
-                    <p class="quote-text">"The place I'm going is right here"</p>
-                </div>
-                <div class="quote-bubble">
-                    <p class="quote-text">"For the speed!"</p>
-                </div>
-                <!-- <p class="quote-bubble">
-                    "Searching for a bumblebee on a purple flower" <br>
-                    <span class="quote-subtext">Court St</span>
-                </p> -->
-            </div>
-
-            <div class="step" id="step-intro-3">
-                <p>
-                    Apparently it's a pretty good shortcut.
-                </p>
-            </div>
-        </div>
-
-
-        <div class="step-paragraph">
+        <div class="step-paragraph" style="margin-top:-40rem; ">
             <p style="margin-bottom: 2rem;">
                 <!-- When you think about how to get around in a city, what usually comes to mind is a map of streets and 
                 sidewalks forming islands -- city blocks -- of buildings, in a
@@ -780,7 +720,7 @@
 
                 <div style="display:flex; width: 100%; justify-content: space-around;">
                     <div>
-                        <img src="img/burgerway_alley.jpg" width="80%"><br>
+                        <img src="img/koffee_alley.jpg" width="80%"><br>
                         <!-- Corniglia, Italy -->
                     </div>
                     <div>
@@ -794,26 +734,99 @@
                 </div>
 
                 <p>
-                    ...but the reality is that these spaces are important, 
-                    charming, and useful.
+                    ...but the reality is that these spaces are important, quaint, and 
+                    charming, for those who use them.
                 </p>
             
         </div>
+
+        <style>
+            #intro-steps {
+                text-align: center;
+            }
+
+            #intro-steps > .step {
+                max-width: 50%;
+                margin-left: auto;
+                /* color:red; */
+                /* background-color: red; */
+            }
+        </style>
+
+        <div class="scrolly-overlay" id="intro-steps" style="margin-right: auto; margin-left:auto; max-width: 80%;">
+            <div class="step" id="step-intro" style="margin-bottom:1rem;">
+                <p>
+                    The alley we walked through in the intro -- we can call that
+                     <b>Yale-International alley</b>, since...
+                </p>
+            </div>
+
+            <div style="margin-top:1rem; margin-bottom:2rem; width: 100%; text-align: center;">
+                <img width="50%" src="img/yale-international_annotated.jpg">
+            </div>
+
+            
+
+            <div class="step" id="step-intro-2" style="margin-top:1rem; margin-bottom:2rem;">
+                <p>
+                    it lies right here, right next to the Yale-International Center. And it's 
+                    a very high-traffic alleyway. 
+                    <!-- It's about 75 feet long, and 2.5 feet 
+                    wide at its narrowest. -->
+                </p>
+            </div>
+
+            <div id="quote-bubbles" style="background-color: rgba(200, 200, 200, 0.4); margin-left:auto;">
+                <div style="text-align: center; font-size:x-large; font-weight:bold;">
+                    <i>Why were you walking through this alley?</i>
+                </div>
+
+                <div class="quote-bubble">
+                    <p class="quote-text">"It's much faster"</p>
+                </div>
+                <div class="quote-bubble right">
+                    <p class="quote-text">"The place I'm going is right here"</p>
+                </div>
+                <div class="quote-bubble">
+                    <p class="quote-text">"For the speed!"</p>
+                </div>
+                <!-- <p class="quote-bubble">
+                    "Searching for a bumblebee on a purple flower" <br>
+                    <span class="quote-subtext">Court St</span>
+                </p> -->
+            </div>
+
+            <div class="step" id="step-intro-3" style=" margin-top:1rem; margin-bottom:2rem; ">
+                <p>
+                    It's an important shortcut for a lot of people -- an important alley.
+                    Yet, it has no name.
+                </p>
+            </div>
+
+            <div class="step" id="step-intro-3">
+                <p>
+                    Some alleys have names. Some don't. Regardless, they all tell a story.
+                    <br><br>
+                    Let's read them.
+                </p>
+            </div>
+        </div>
+
 
         <div class="scrolly-overlay">
             
             <div class="step" id="step-zero">
                 <!-- <p> <span style="font-weight: bold;"> -->
                 <p>
-                <b>New Haven</b> is known for a lot — 
-                (A)pizza, Yale, its Elm trees — 
-                but alleys are not usually one of them.
+                While <b>New Haven</b> is known for a lot — 
+                Apizza, Yale, Elm trees — 
+                its alleys are not usually one of them.
                 </p>
             </div>
             
             <div class="step" id="step-one">
                 <p>
-                    But these alleys form an entire 
+                    New Haven's alleys form an entire 
                     navigable network of <span style="font-weight: bold; color:#a93400;">invisible 
                         paths</span>, traversing and snaking through the city.
                 </p>
@@ -844,8 +857,8 @@
         <div class="scrolly-overlay">
             <div class="step" id="step-two">
                 <p>
-                    But <span style="color:#40c945">these places</span>, which might not fit that definition,
-                    are all going to be considered alleys:
+                    But we're going to broadly define an alley to include places
+                     <span style="color:#279f2b">like these</span>.
                     <br><br>
                     <div style="display:flex; width: 100%; justify-content: space-around;">
                         <div style="margin-left:5%;">
@@ -863,47 +876,16 @@
                     </div>
                 </p>
                 <p>
-                    <i>Note that the <b>Alexander Walk</b> will be considered 
-                    an alley, but <b>Wall St</b> will not.</i>
+                    <!-- <i>Note that the <b>Alexander Walk</b> will be considered 
+                    an alley, but <b>Wall St</b> will not.</i> -->
                 </p>
             </div>
         </div>
 
         <div class="step-paragraph">
 
-            <!-- <p>
-                But these places are all going to be 
-                considered alleys:
-                <br><br>
-                <div style="display:flex; width: 100%; justify-content: space-around;">
-                    <div>
-                        <img src="italy_alley.jpg" width="80%"><br>
-                        Alexander Walk
-                    </div>
-                    <div>
-                        <img src="cordoba_alley.jpg" width="80%"><br>
-                        Burgerway Alley
-                    </div>
-                    <div>
-                        <img src="cairo_2.jpg" width="80%"><br>
-                        Pitkin plaza
-                    </div>
-                </div>
-                <br>
-
-                <i>Note that the Alexander Walk will be considered 
-                an alley, but Wall St will not.</i>
-            </p> -->
-
             <p> 
-                And while they might not be "tree-shrouded walks", have garage or trash access,
-                 or even be particularly narrow, the simple reason for their
-                inclusion is that sometimes places just have the <i>feel</i> of an alley.
-                <br><br>
-
-                Oftentimes this "feeling" arises from the lack of focus on motor vehicle
-                through-traffic -- none of the places that will be considered alleys 
-                have unrestricted car traffic -- which makes them quieter, 
+                All these alleys have heavily restricted or no car traffic -- which makes them quieter, 
                 more peaceful, and feel more human.
                 
             </p>
@@ -913,20 +895,19 @@
         <div class="scrolly-overlay">
 
             
-            <div class="step" id="step-two-point-five"> 
+            <!-- <div class="step" id="step-two-point-five"> 
                 <p style="color:blue;">
                     If I have time: Maybe go to all of the accessible alleys and measure 
                     average noise levels for a minute or two, and compare to sidewalks?
                     Plot it all. Then, I can likely make the point that they're
                      also islands of quiet in the city.
                 </p>
-            </div>
+            </div> -->
 
             <div class="step" id="step-three"> 
                 <!-- Set this class to have a longer divide between this and previous, maybe swap side of map -->
                 <p>
-                    In line with this fuzzy definition, <b>New Haven's Alleys come in
-                         many shapes and sizes.</b><br>
+                    And these many alleys come in many shapes and sizes.<br>
                 </p>
             </div>
 
@@ -951,18 +932,22 @@
                 </p>
             </div>
             
+            <div class="step" id="step-four"> 
+                <p>
+                    alley < alley < alley --> alley alley alley
+                </p>
+            </div>
             
             <div class="step" id="step-five"> 
                 <p>
-                    And every so often, an alley can truly show itself off, 
+                    Some alleys can truly show itself off, 
                     become something truly exceptional, and <i>blossom</i>...
-
                 </p>
             </div>
         </div>
 
 
-        <div class="sticky-thing">
+        <!-- <div class="sticky-thing">
             <div style="width: 59%; margin-right:0%; margin-left:auto; margin-bottom:auto;
                 margin-top:0%; background-color: red; padding:0.5rem;">
                     <p style="font-size: 30px; margin:auto; margin-left:10%;">
@@ -971,9 +956,9 @@
             </div>
             <div style="width: 59%; margin-right:0%; margin-left:auto; margin-bottom:auto;
             margin-top:0%; padding:0.5rem; text-align: center;">
-                <img src="img/court st festival.gif">
-            </div>
-        </div>
+                <img src="img/court st festival.gif"> -->
+            <!-- </div> -->
+        <!-- </div> -->
 
         <div class="scrolly-overlay">
 
@@ -989,75 +974,39 @@
 
                 </p>
 
-                <img src="court st festival.gif" width="100%">
+                <!-- <img src="court st festival.gif" width="100%"> -->
             </div>
-            
-            <!-- <div class="step" id="step-five-video" style="background-color: rgba(0,0,0,0.0);">
-                <img src="court st festival.gif">
-            </div> -->
 
-            <div class="step" id="step-six"> 
+            <div class="step" id="step-seven">
                 <p>
-                    The various appearances, sizes, and "feels" of New Haven's
-                    many alleys leads to some being used more than others. 
-                    
-                    We can visualize <span>how frequently</span> each alley 
-                    is entered or travelled through.
+                    Some alleys, though,
+
+                    I couldn't get into at all.
                 </p>
             </div>
 
-            <div class="step" id="step-eight"> 
+            <div class="step" id="step-eight">
                 <p>
-                    But in almost every case, <span>public</span>
-                    alleys get far more use than 
-                    <span>private</span> alleys.
+                    <b>No matter how beautiful they looked from the outside,</b>
+                    <img src="img/wooster_locked.jpg" width="100%">
                 </p>
             </div>
 
-            <div class="step" id="step-nine"> 
+            <div class="step" id="step-nine">
                 <p>
-                    Alleys add a lot of character to a city.
-                    And there <i>are</i> <span>new alleys being built</span>
-                     in New Haven -- but they're not <i>public</i>.
-
+                    Their entrances were <b>locked behind gates.</b>
+                    <img src="img/wooster_gate.jpg" width="100%">
                 </p>
             </div>
 
             <div class="step" id="step-ten"> 
                 <p>
-                    Many of the <span>new housing developments</span> 
+                    This is just one of the many of the <span>new housing developments</span> 
                     in downtown New Haven have used what <i>could</i> be public 
                     alley space as private courtyard space.
                 </p>
             </div>
 
-        </div>
-            
-        <div class="step-paragraph">
-            <p>
-                While the privatization of this space is the culmination
-                of many aspects of modern urban development, <br><br>
-
-                it's more important that we notice and recognize 
-                the value of our alleys.
-            </p>
-        </div>
-
-        <div class="step-paragraph">
-            <p> 
-                Compared to the extensive street network, 
-                New Haven's little alleys are short, tight, and
-                infrequent.
-                
-                <br><br>
-                But they're cute, fun, and have a lot of potential. 
-                They're spaces that can shorten commutes, 
-                be enjoyable to walk through, and serve as 
-                a spot to congregate and chill. And given the
-                frequency of their use,
-                we know there <i>is</i> demand for them, 
-                and people enjoy the spaces.
-            </p>
         </div>
 
         <div class="scrolly-overlay">
@@ -1074,15 +1023,6 @@
             </div>
         </div>
 
-        <div class="step-paragraph">
-            <p>
-                We <i>can</i> make more quaint alleys and places
-                that are lovely to walk through, with the right
-                advocation and approach to urban development.
-            </p>
-        </div>
-
-        
         <div class="step-paragraph">
             <p>
                 Our alleys should be as cherished, as
@@ -1124,212 +1064,212 @@
 
 	  <!-- <img src="new-haven.png" style="width: 70%; margin: 3% 15%;"> -->
 
-    <script>
+    <script src="script.js">
       
-    /* Scrollytelling code goes under here */
+    // /* Scrollytelling code goes under here */
 
-	  // Code that runs when the website loads
-	  document.addEventListener("DOMContentLoaded", function(e) {
-        d3.select(".ai2html-container").classed("invisible", true);
-        d3.selectAll("#s0_A, #s1_A, #s2_A, #s3_A, #s4_A, #s5_A").classed("invisible", true);
-    });
+	//   // Code that runs when the website loads
+	//   document.addEventListener("DOMContentLoaded", function(e) {
+    //     d3.select(".ai2html-container").classed("invisible", true);
+    //     d3.selectAll("#s0_A, #s1_A, #s2_A, #s3_A, #s4_A, #s5_A").classed("invisible", true);
+    // });
 
-		// for debugging
-		///////////////
-		//
-		// document.addEventListener("mousemove", (e) => {
-		// 	console.log("(" + e.clientX + ", " + e.clientY + ")");
-		// });
+	// 	// for debugging
+	// 	///////////////
+	// 	//
+	// 	// document.addEventListener("mousemove", (e) => {
+	// 	// 	console.log("(" + e.clientX + ", " + e.clientY + ")");
+	// 	// });
 
-        // introduction
+    //     // introduction
 
-        d3.select("#step-intro").on('stepin', function(e) {
-            d3.select("body").style("background-color", "#96bfe6"); // #81e8bc
-        });
-        d3.select("#step-intro").on('stepout', function(e) {
-            if (e.detail.direction == 'up')
-                d3.select("body").style("background-color", "#ebd999"); // #81e8bc
-        });
+    //     d3.select("#step-intro").on('stepin', function(e) {
+    //         d3.select("body").style("background-color", "#96bfe6"); // #81e8bc
+    //     });
+    //     d3.select("#step-intro").on('stepout', function(e) {
+    //         if (e.detail.direction == 'up')
+    //             d3.select("body").style("background-color", "#ebd999"); // #81e8bc
+    //     });
 
-        d3.select("#step-intro-3").on('stepin', function(e) {
-            d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-        });
-        d3.select("#step-intro-3").on('stepout', function(e) {
-            if (e.detail.direction == 'down')
-                d3.select("#scrolly").style("background-color", "#ebd999"); // #81e8bc
-        });
-
-
-		/// STEP ZERO
-
-		//   Entering Step Zero
-		d3.select("#step-zero").on('stepin',function(e) {
-			// d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
-			d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-			// d3.selectAll("#s0_A").classed('hidden', false);
-
-            d3.select(".ai2html-container").classed("invisible", false);
-            d3.select(".ai2html-container").style("margin-right", "1%");
-
-            d3.select("#s0_A").classed('invisible', false);
-            d3.select("#s1_A").classed('invisible', true);
-			// d3.select("#bgimg1").style("margin-left", (window.innerWidth > 700) ? "auto" : "0");
-			// d3.select("#bgimg1").style("margin-right", (window.innerWidth > 700) ? "10%" : "auto");
-			// d3.select(".ai2html-container").style("transform", "scale(1.0)");
-			// d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
-		})
-
-		// exiting zero
-		d3.select("#step-zero").on('stepout',function(e) {
-			if (e.detail.direction == 'up') {
-
-				// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
-				d3.select(".ai2html-container").classed("invisible", true);
-				// d3.select("#bgimg1").attr("src", "new_haven_road_map_1.png");
-				d3.selectAll("#s0_A").classed('invisible', true);
-				d3.select("#scrolly").style("background-color", "#ebd999");
-			}
-		})
-
-		//   Entering Step One
-		d3.select("#step-one").on('stepin',function(e) {
-			d3.selectAll("#s0_A").classed('invisible', true);
-			d3.selectAll("#s1_A").classed('invisible', false); // mory's stuff
-			// // d3.selectAll(".g-onLoad_A").classed('hidden', true);
-			// d3.selectAll("#s2_A").classed('hidden', true);
-
-			// d3.select(".ai2html-container").style("transform", "scale(5.0) translate(3%, 4%)");
-		})
-
-        d3.select("#step-one-exit").on('stepin',function(e) {
-            d3.select(".ai2html-container").classed("invisible", false);
-            d3.select("#s1_A").classed("invisible", false);
-            d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-        })
+    //     d3.select("#step-intro-3").on('stepin', function(e) {
+    //         d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+    //     });
+    //     d3.select("#step-intro-3").on('stepout', function(e) {
+    //         if (e.detail.direction == 'down')
+    //             d3.select("#scrolly").style("background-color", "#ebd999"); // #81e8bc
+    //     });
 
 
-        d3.select("#step-one-exit").on('stepout',function(e) {
-			if (e.detail.direction == 'down') {
-				d3.select(".ai2html-container").classed("invisible", true);
-                d3.select("#s1_A").classed("invisible", true);
-				d3.select("#scrolly").style("background-color", "#ebd999");
-			}
-		});
+	// 	/// STEP ZERO
+
+	// 	//   Entering Step Zero
+	// 	d3.select("#step-zero").on('stepin',function(e) {
+	// 		// d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
+	// 		d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+	// 		// d3.selectAll("#s0_A").classed('hidden', false);
+
+    //         d3.select(".ai2html-container").classed("invisible", false);
+    //         d3.select(".ai2html-container").style("margin-right", "1%");
+
+    //         d3.select("#s0_A").classed('invisible', false);
+    //         d3.select("#s1_A").classed('invisible', true);
+	// 		// d3.select("#bgimg1").style("margin-left", (window.innerWidth > 700) ? "auto" : "0");
+	// 		// d3.select("#bgimg1").style("margin-right", (window.innerWidth > 700) ? "10%" : "auto");
+	// 		// d3.select(".ai2html-container").style("transform", "scale(1.0)");
+	// 		// d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
+	// 	})
+
+	// 	// exiting zero
+	// 	d3.select("#step-zero").on('stepout',function(e) {
+	// 		if (e.detail.direction == 'up') {
+
+	// 			// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
+	// 			d3.select(".ai2html-container").classed("invisible", true);
+	// 			// d3.select("#bgimg1").attr("src", "new_haven_road_map_1.png");
+	// 			d3.selectAll("#s0_A").classed('invisible', true);
+	// 			d3.select("#scrolly").style("background-color", "#ebd999");
+	// 		}
+	// 	})
+
+	// 	//   Entering Step One
+	// 	d3.select("#step-one").on('stepin',function(e) {
+	// 		d3.selectAll("#s0_A").classed('invisible', true);
+	// 		d3.selectAll("#s1_A").classed('invisible', false); // mory's stuff
+	// 		// // d3.selectAll(".g-onLoad_A").classed('hidden', true);
+	// 		// d3.selectAll("#s2_A").classed('hidden', true);
+
+	// 		// d3.select(".ai2html-container").style("transform", "scale(5.0) translate(3%, 4%)");
+	// 	})
+
+    //     d3.select("#step-one-exit").on('stepin',function(e) {
+    //         d3.select(".ai2html-container").classed("invisible", false);
+    //         d3.select("#s1_A").classed("invisible", false);
+    //         d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+    //     })
 
 
-        // one quick thing on #step-two
-		d3.select("#step-two").on('stepin',function(e) {
-            d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+    //     d3.select("#step-one-exit").on('stepout',function(e) {
+	// 		if (e.detail.direction == 'down') {
+	// 			d3.select(".ai2html-container").classed("invisible", true);
+    //             d3.select("#s1_A").classed("invisible", true);
+	// 			d3.select("#scrolly").style("background-color", "#ebd999");
+	// 		}
+	// 	});
+
+
+    //     // one quick thing on #step-two
+	// 	d3.select("#step-two").on('stepin',function(e) {
+    //         d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
             
-            d3.select(".ai2html-container").classed("invisible", false);
-            d3.select("#s2_A").classed("invisible", false);
-            d3.select(".ai2html-container").style("margin-right", "1%");
-        });
+    //         d3.select(".ai2html-container").classed("invisible", false);
+    //         d3.select("#s2_A").classed("invisible", false);
+    //         d3.select(".ai2html-container").style("margin-right", "1%");
+    //     });
         
-        d3.select("#step-two").on('stepout',function(e) {
-            d3.select("#s2_A").classed("invisible", true);
-            d3.select(".ai2html-container").classed("invisible", true);
-            d3.select("#scrolly").style("background-color", "#ebd999");
+    //     d3.select("#step-two").on('stepout',function(e) {
+    //         d3.select("#s2_A").classed("invisible", true);
+    //         d3.select(".ai2html-container").classed("invisible", true);
+    //         d3.select("#scrolly").style("background-color", "#ebd999");
             
-        });
+    //     });
         
-        // SECOND ITERATION OF THE WHOLE SCROLLY THING
+    //     // SECOND ITERATION OF THE WHOLE SCROLLY THING
         
-        //   Entering Step Zero
-		d3.select("#step-three").on('stepin',function(e) {
-            // d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
-			d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-			// d3.selectAll("#s0_A").classed('hidden', false);
+    //     //   Entering Step Zero
+	// 	d3.select("#step-three").on('stepin',function(e) {
+    //         // d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
+	// 		d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+	// 		// d3.selectAll("#s0_A").classed('hidden', false);
             
-            d3.select("#s3_A").classed("invisible", false);
-            // d3.select("#s5_A").classed("invisible", false);
+    //         d3.select("#s3_A").classed("invisible", false);
+    //         // d3.select("#s5_A").classed("invisible", false);
 
-            d3.select(".ai2html-container").classed("invisible", false);
-            d3.select(".ai2html-container").style("margin-right", "1%");
-            // d3.select(".sticky-thing").style("height", false);
+    //         d3.select(".ai2html-container").classed("invisible", false);
+    //         d3.select(".ai2html-container").style("margin-right", "1%");
+    //         // d3.select(".sticky-thing").style("height", false);
 
-			// d3.select(".ai2html-container").style("transform", "scale(1.0)");
-			// d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
-		})
+	// 		// d3.select(".ai2html-container").style("transform", "scale(1.0)");
+	// 		// d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
+	// 	})
         
-		// exiting zero
-		d3.select("#step-three").on('stepout',function(e) {
-            if (e.detail.direction == 'up') {
+	// 	// exiting zero
+	// 	d3.select("#step-three").on('stepout',function(e) {
+    //         if (e.detail.direction == 'up') {
 
-				// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
-				// d3.select("#bgimg1").attr("src", "new_haven_road_map_1.png");
+	// 			// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
+	// 			// d3.select("#bgimg1").attr("src", "new_haven_road_map_1.png");
 				
-                d3.select("#s2_3").classed("invisible", true);
-                // d3.selectAll("#s5_A").classed('invisible', false);
+    //             d3.select("#s2_3").classed("invisible", true);
+    //             // d3.selectAll("#s5_A").classed('invisible', false);
 
-                d3.select(".ai2html-container").classed("invisible", true);
-				d3.select("#scrolly").style("background-color", "#ebd999");
-				// d3.selectAll(".g-onLoad_A").classed('hidden', false);
-                // d3.select(".sticky-thing").style("height", "0px");
-			}
-		})
+    //             d3.select(".ai2html-container").classed("invisible", true);
+	// 			d3.select("#scrolly").style("background-color", "#ebd999");
+	// 			// d3.selectAll(".g-onLoad_A").classed('hidden', false);
+    //             // d3.select(".sticky-thing").style("height", "0px");
+	// 		}
+	// 	})
 
-        d3.select("#step-four").on('stepin', function(e) {
-            d3.selectAll("#s5_A").classed('invisible', true);
-            d3.select(".ai2html").style("transform", "scale(1.0)");
-        });
+    //     d3.select("#step-four").on('stepin', function(e) {
+    //         d3.selectAll("#s5_A").classed('invisible', true);
+    //         d3.select(".ai2html").style("transform", "scale(1.0)");
+    //     });
 
-        d3.select("#step-five").on('stepin',function(e) {
-            d3.selectAll("#s5_A").classed('invisible', false);
-            // d3.select(".ai2html-container").classed("invisible", false);
-            d3.select(".ai2html").style("transform", "scale(3.0) translate(-25%,-25%)");
+    //     d3.select("#step-five").on('stepin',function(e) {
+    //         d3.selectAll("#s5_A").classed('invisible', false);
+    //         // d3.select(".ai2html-container").classed("invisible", false);
+    //         d3.select(".ai2html").style("transform", "scale(3.0) translate(-25%,-25%)");
             
-            // d3.select(".ai2html-container").style("transform", "scale(1.0)");
-            // d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
-        });
+    //         // d3.select(".ai2html-container").style("transform", "scale(1.0)");
+    //         // d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
+    //     });
         
-        d3.select("#step-six").on('stepin', function(e) {
-            d3.selectAll("#s5_A").classed('invisible', true);
-            // d3.select(".ai2html-container").classed("invisible", false);
-            d3.select(".ai2html").style("transform", "scale(1.0) translate(0.0,0.0)");
+    //     d3.select("#step-six").on('stepin', function(e) {
+    //         d3.selectAll("#s5_A").classed('invisible', true);
+    //         // d3.select(".ai2html-container").classed("invisible", false);
+    //         d3.select(".ai2html").style("transform", "scale(1.0) translate(0.0,0.0)");
 
-        });
+    //     });
 
 
-        ///// last one!!!
+    //     ///// last one!!!
 
-        d3.select("#step-eleven").on('stepin',function(e) {
-            // d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
-			d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-			// d3.selectAll("#s0_A").classed('hidden', false);
+    //     d3.select("#step-eleven").on('stepin',function(e) {
+    //         // d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
+	// 		d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+	// 		// d3.selectAll("#s0_A").classed('hidden', false);
             
-            // d3.select("#s3_A").classed("invisible", false);
-            // d3.select("#s5_A").classed("invisible", false);
+    //         // d3.select("#s3_A").classed("invisible", false);
+    //         // d3.select("#s5_A").classed("invisible", false);
 
-            d3.select(".ai2html-container").classed("invisible", false);
-            d3.select(".ai2html-container").style("margin-right", "1%");
-		})
+    //         d3.select(".ai2html-container").classed("invisible", false);
+    //         d3.select(".ai2html-container").style("margin-right", "1%");
+	// 	})
         
-        d3.select("#step-eleven").on('stepout',function(e) {
-			if (e.detail.direction == 'down') {
-				d3.select(".ai2html-container").classed("invisible", true);
-                d3.select("#s1_A").classed("invisible", true);
-				d3.select("#scrolly").style("background-color", "#ebd999");
-			}
-		});
+    //     d3.select("#step-eleven").on('stepout',function(e) {
+	// 		if (e.detail.direction == 'down') {
+	// 			d3.select(".ai2html-container").classed("invisible", true);
+    //             d3.select("#s1_A").classed("invisible", true);
+	// 			d3.select("#scrolly").style("background-color", "#ebd999");
+	// 		}
+	// 	});
 
-        d3.select("#step-final").on('stepin', function(e) {
-            d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+    //     d3.select("#step-final").on('stepin', function(e) {
+    //         d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
             
-            d3.select("#sFinal_A").classed("invisible", false);
-            d3.select(".ai2html-container").classed("invisible", false);
-            // d3.select(".ai2html-container").style("margin-right", "1%");
-        });
+    //         d3.select("#sFinal_A").classed("invisible", false);
+    //         d3.select(".ai2html-container").classed("invisible", false);
+    //         // d3.select(".ai2html-container").style("margin-right", "1%");
+    //     });
 
-        d3.select("#step-final").on('stepout', function(e) {
+    //     d3.select("#step-final").on('stepout', function(e) {
 
-            d3.select("#sFinal_A").classed("invisible", true);
-            d3.select(".ai2html-container").classed("invisible", true);
-            d3.select("#scrolly").style("background-color", "#ebd999");
+    //         d3.select("#sFinal_A").classed("invisible", true);
+    //         d3.select(".ai2html-container").classed("invisible", true);
+    //         d3.select("#scrolly").style("background-color", "#ebd999");
 
-        });
+    //     });
 
-    </script>
+    // </script>
 
 <script>
     const scroller = scrollama();
