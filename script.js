@@ -69,6 +69,7 @@
 		d3.select("#step-one").on('stepin',function(e) {
 			d3.selectAll("#s0_A").classed('invisible', true);
 			d3.selectAll("#s1_A").classed('invisible', false); // mory's stuff
+            d3.select("#s2_A").classed("invisible", true);
 			// // d3.selectAll(".g-onLoad_A").classed('hidden', true);
 			// d3.selectAll("#s2_A").classed('hidden', true);
 
@@ -134,7 +135,7 @@
 				// d3.select(".sticky-thing").select("img").style("margin-right", "auto");
 				// d3.select("#bgimg1").attr("src", "new_haven_road_map_1.png");
 				
-                d3.select("#s2_3").classed("invisible", true);
+                d3.select("#s2_A").classed("invisible", true);
                 // d3.selectAll("#s5_A").classed('invisible', false);
 
                 d3.select(".ai2html-container").classed("invisible", true);
@@ -216,29 +217,20 @@
         // });
 
 
-        d3.select("#step-five").on('stepin', function(e) {
-            // d3.selectAll("#s5_A").classed('invisible', true);
-            d3.selectAll("#sCourt_A").classed('invisible', true);
-
-            if (e.detail.direction == 'down') {
-                d3.select(".ai2html-container").style("transform", "scale(1.0) translate(0.0)");
-                d3.select(".ai2html").style("transform", "scale(1.0)");
-                d3.select(".ai2html-container").style("z-index", 1);
-                d3.selectAll(".scrolly-overlay").style("margin-left","5%");
-				// d3.select("#scrolly").style("background-color", "#ebd999");
-            } else { // entering the zone
-                d3.select(".ai2html-container").style("transform", "scale(0.40)");
-                d3.select(".ai2html-container").style("margin-bottom", "1%");
-                d3.select(".ai2html-container").classed("invisible", false);
-                d3.select(".ai2html-container").style("z-index", 100);
-                d3.selectAll(".scrolly-overlay").style("margin-left","0");
-                d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-            }
-        });
-
-
         d3.select("#step-court").on('stepin',function(e) {
             d3.selectAll("#sCourt_A").classed('invisible', false);
+            d3.select(".ai2html-container").classed("invisible", false);
+            d3.select(".ai2html").style("transform", "scale(5.0) translate(-30%,-25%)");
+            
+            d3.select(".ai2html-container").style("transform", "scale(0.40)");
+            d3.select(".ai2html-container").style("margin-bottom", "1%");
+            d3.selectAll(".scrolly-overlay").style("margin-left","0");
+            d3.selectAll(".scrolly-overlay").style("max-width","25%");
+            // d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
+        });
+
+        d3.select("#step-court").on('stepout',function(e) {
+            d3.selectAll("#sCourt_A").classed('invisible', true);
             d3.select(".ai2html-container").classed("invisible", false);
             d3.select(".ai2html").style("transform", "scale(5.0) translate(-30%,-25%)");
             
@@ -248,6 +240,8 @@
         });
         
         d3.select("#step-seven").on('stepin', function(e) {
+            d3.selectAll(".scrolly-overlay").style("margin-left","5%");
+            d3.selectAll(".scrolly-overlay").style("max-width","unset");
             d3.selectAll("#sCourt_A").classed('invisible', true);
             d3.select(".ai2html-container").classed("invisible", true);
             // d3.select(".ai2html").style("transform", "scale(1.0) translate(0.0,0.0)");
