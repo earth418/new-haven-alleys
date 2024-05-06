@@ -3,7 +3,9 @@
 	  // Code that runs when the website loads
 	  document.addEventListener("DOMContentLoaded", function(e) {
         d3.select(".ai2html-container").classed("invisible", true);
-        d3.selectAll("#s0_A, #s1_A, #s2_A, #s3_A, #s4_A, #s5_A").classed("invisible", true);
+        d3.selectAll("#s0_A, #s1_A, #s2_A, #s3_A, \
+        #s4_A, #s5_A, #sMid_A, #sNarrow_A, \
+        #sWide_A, #sExplore_A, #sCourt_A").classed("invisible", true);
     });
 
 		// for debugging
@@ -114,6 +116,7 @@
 			// d3.selectAll("#s0_A").classed('hidden', false);
             
             d3.select("#s3_A").classed("invisible", false);
+            d3.select("#sWide_A").classed("invisible", true);
             // d3.select("#s5_A").classed("invisible", false);
 
             d3.select(".ai2html-container").classed("invisible", false);
@@ -141,7 +144,28 @@
 			}
 		});
 
+
+        d3.select("#step-wide").on('stepin', function(e) {
+            d3.select("#sWide_A").classed("invisible", false);
+            d3.select("#sNarrow_A").classed("invisible", true);
+        })
+        d3.select("#step-narrow").on('stepin', function(e) {
+            d3.select("#sWide_A").classed("invisible", true);
+            d3.select("#sNarrow_A").classed("invisible", false);
+            d3.select("#sMid_A").classed("invisible", true);
+        })
+        d3.select("#step-mid").on('stepin', function(e) {
+            d3.select("#sNarrow_A").classed("invisible", true);
+            d3.select("#sMid_A").classed("invisible", false);
+            d3.select(".ai2html-container").style("transform", "scale(1.0) translate(0.0)");
+            d3.select(".ai2html").style("transform", "scale(1.0)");
+        })
+
+
         d3.select("#step-four").on('stepin', function(e) {
+            d3.select("#sMid_A").classed("invisible", true);
+
+
             // d3.selectAll("#s5_A").classed('invisible', true);
             if (e.detail.direction == 'up') {
                 d3.select(".ai2html-container").style("transform", "scale(1.0) translate(0.0)");
@@ -150,7 +174,7 @@
                 d3.selectAll(".scrolly-overlay").style("margin-left","5%");
                 d3.select("#sExplore_A").classed("invisible", true);
 				// d3.select("#scrolly").style("background-color", "#ebd999");
-            } else { // entering the zone
+            } else if (e.detail.direction == 'down') { // entering the zone
                 d3.select(".ai2html-container").style("transform", "scale(0.40)");
                 d3.select(".ai2html-container").style("margin-bottom", "1%");
                 d3.select(".ai2html-container").classed("invisible", false);
@@ -161,18 +185,25 @@
             }
         });
 
+
+        // step four
         let step4s = ["a", "an", "b", "bn", "bnn", "c", "cn", "d"];
         let offsets = [
-            [-25, 20],
-            [-25, 20],
-            [25, -20],
-            [-25, 20],
-            [-25, -20],
+            [-22, 10],
+            [10, -10],
+            [-15, -18],
+            [-16, 14],
+            [0, -15],
+            [28, 5],
+            [18, 0],
+            [-30, -25],
         ];
 
+        let scales = [8.0, 8.0, 5.0, 8.0, 5.0, 8.0, 8.0, 5.0]
+
         step4s.forEach((n, index) => {
-            d3.select("step-4" + n).on('stepin', function(e) {
-                d3.select(".ai2html").style("transform", "scale(5.0) translate(" +
+            d3.select("#step-4" + n).on('stepin', function(e) {
+                d3.select(".ai2html").style("transform", "scale(" + scales[index] + ") translate(" +
                  offsets[index][0] + "%," + offsets[index][1] + "%)");
             })
         })
@@ -187,6 +218,8 @@
 
         d3.select("#step-five").on('stepin', function(e) {
             // d3.selectAll("#s5_A").classed('invisible', true);
+            d3.selectAll("#sCourt_A").classed('invisible', true);
+
             if (e.detail.direction == 'down') {
                 d3.select(".ai2html-container").style("transform", "scale(1.0) translate(0.0)");
                 d3.select(".ai2html").style("transform", "scale(1.0)");
@@ -203,13 +236,9 @@
             }
         });
 
-        // d3.selectAll(".pic-step").on('stepin', function(e) {
-        //     console.log(e);
-        // });
 
-
-        d3.select("#step-five").on('stepin',function(e) {
-            d3.selectAll("#s5_A").classed('invisible', false);
+        d3.select("#step-court").on('stepin',function(e) {
+            d3.selectAll("#sCourt_A").classed('invisible', false);
             d3.select(".ai2html-container").classed("invisible", false);
             d3.select(".ai2html").style("transform", "scale(5.0) translate(-30%,-25%)");
             
@@ -218,10 +247,10 @@
             // d3.selectAll("#s1_A").classed('hidden', true); // mory's stuff
         });
         
-        d3.select("#step-six").on('stepin', function(e) {
-            d3.selectAll("#s5_A").classed('invisible', true);
-            d3.select(".ai2html-container").classed("invisible", false);
-            d3.select(".ai2html").style("transform", "scale(1.0) translate(0.0,0.0)");
+        d3.select("#step-seven").on('stepin', function(e) {
+            d3.selectAll("#sCourt_A").classed('invisible', true);
+            d3.select(".ai2html-container").classed("invisible", true);
+            // d3.select(".ai2html").style("transform", "scale(1.0) translate(0.0,0.0)");
 
         });
 
@@ -238,35 +267,17 @@
         d3.select("#step-eleven").on('stepin',function(e) {
             // d3.select("#scrolly").style("background-color", "#bfd8d3"); // #81e8bc
 			d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-			// d3.selectAll("#s0_A").classed('hidden', false);
-            
-            // d3.select("#s3_A").classed("invisible", false);
-            // d3.select("#s5_A").classed("invisible", false);
 
-            d3.select(".ai2html-container").classed("invisible", false);
+            d3.selectAll(".gate-pic").classed("invisible", true);
+
+            d3.select(".ai2html-container").classed("invisible", true);
             d3.select(".ai2html-container").style("margin-right", "1%");
 		})
         
         d3.select("#step-eleven").on('stepout',function(e) {
 			if (e.detail.direction == 'down') {
-				d3.select(".ai2html-container").classed("invisible", true);
+				// d3.select(".ai2html-container").classed("invisible", true);
                 d3.select("#s1_A").classed("invisible", true);
 				d3.select("#scrolly").style("background-color", "#ebd999");
 			}
 		});
-
-        d3.select("#step-final").on('stepin', function(e) {
-            d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
-            
-            d3.select("#sFinal_A").classed("invisible", false);
-            d3.select(".ai2html-container").classed("invisible", false);
-            // d3.select(".ai2html-container").style("margin-right", "1%");
-        });
-
-        d3.select("#step-final").on('stepout', function(e) {
-
-            d3.select("#sFinal_A").classed("invisible", true);
-            d3.select(".ai2html-container").classed("invisible", true);
-            d3.select("#scrolly").style("background-color", "#ebd999");
-
-        });
