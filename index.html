@@ -35,7 +35,7 @@
 
     <style>
         #quote-bubbles {
-            width: 100%;
+            width: 80%;
             /* position:absolute; */
             z-index:5;
             /* top:100%; */
@@ -738,7 +738,7 @@
         <div class="step-paragraph">
             <p style="margin-bottom: 2rem;">
                 At first glance, New Haven's alleys might not seem
-                on the same caliber as these alleys...
+                to be quite on the same level...
             </p>
 
                 <div style="display:flex; width: 100%; justify-content: space-around;">
@@ -757,8 +757,8 @@
                 </div>
 
                 <p>
-                    ...but the reality is that these spaces are important, quaint, and 
-                    charming, for those who use them.
+                    ...but the reality is that these spaces are charming,
+                    interesting, and important, for those who use them.
                 </p>
             
         </div>
@@ -793,13 +793,13 @@
             <div class="step" id="step-intro-2" style="margin-top:1rem; margin-bottom:2rem;">
                 <p>
                     it lies right here, right next to the Yale-International Center. And it's 
-                    a very high-traffic alleyway. 
+                    a very high-traffic alleyway. People want to get places.
                     <!-- It's about 75 feet long, and 2.5 feet 
                     wide at its narrowest. -->
                 </p>
             </div>
 
-            <div id="quote-bubbles" style="background-color: rgba(200, 200, 240, 0.8); margin: 4rem; margin-left:auto; position: relative;">
+            <div id="quote-bubbles" style="background-color: rgba(200, 200, 240, 0.8); margin: 4rem; margin-left:auto;margin-right:auto; position: relative;">
                 <div style="text-align: center; position: relative; font-size:2.5rem; font-weight:bold; padding:2rem;z-index:50;">
                     <i>"Why were you walking through this alley?"</i>
                 </div>
@@ -824,14 +824,18 @@
 
             <div class="step" id="step-intro-3" style=" margin-top:1rem; margin-bottom:2rem; ">
                 <p>
-                    It's an important shortcut for a lot of people -- an important alley.
-                    Yet, it has no name.
+                    And it's clearly an important shortcut -- an important alley.
+                    Despite having no official name, a sign greets travelers on either end.
                 </p>
             </div>
 
-            <div class="step" id="step-intro-3">
+            <div style="margin-top:1rem; margin-bottom:2rem; width: 100%; text-align: center;">
+                <img width="50%" src="img/access_restricted.jpg">
+            </div>
+
+            <div class="step" id="step-intro-4">
                 <p>
-                    Some alleys have names. Some don't. Regardless, they all tell a story.
+                    Some alleys have names, signs, high traffic. Some don't. Regardless, they all tell a story.
                     <br><br>
                     Let's read them.
                 </p>
@@ -839,7 +843,7 @@
         </div>
 
 
-        <div class="scrolly-overlay">
+        <div class="scrolly-overlay" style="margin-top:30rem;">
             
             <div class="step" id="step-zero">
                 <p>
@@ -857,15 +861,9 @@
                 </p>
             </div>
                 
-            <div class="step" id="step-one-exit" style="padding-bottom:5rem;margin-bottom:5rem;opacity:0.01%;">
+            <div class="step" id="step-one-exit" style="padding-bottom:5rem;margin-bottom:10rem;opacity:0.01%;">
                 <br>
             </div>
-
-            <!-- <div class="step" id="step-three" >
-			    <p>
-
-                </p>
-            </div> -->
         </div>
 
         <div class="step-paragraph">
@@ -904,6 +902,10 @@
                     <i>Note that the <b>Alexander Walk</b> will be considered 
                     an alley, but <b>Wall St</b> will not.</i>
                 </p> -->
+            </div>
+
+            <div class="step" id="step-two-exit" style="padding-bottom:5rem;margin-bottom:10rem;opacity:0.01%;">
+                <br>
             </div>
         </div>
 
@@ -962,7 +964,7 @@
             </div>
         </div>
 
-        <div class="sticky-thing">
+        <div style="margin-top:50%;position:absolute;">
             <div>
                 <video>
                     <source src="">
@@ -974,14 +976,23 @@
             </div>
         </div>
         
-        <div class="scrolly-overlay" style="margin-left:0; margin-top:-10rem;">  <!--style=" margin:0;width:100%;max-width: unset;"> -->
+        <div class="scrolly-overlay" style="margin-top:-10rem; max-width:25%;">  <!--style=" margin:0;width:100%;max-width: unset;"> -->
             <style>
                 .pic-step {
                     position: sticky;
                     top:0;
-                    margin-bottom: 100rem;
+                    margin-bottom: 70rem;
                     left:0;
                     max-width: 32rem;
+                    /* float: left; */
+                }
+                .inv-step {
+                    position: sticky;
+                    top:0;
+                    margin-bottom: 50rem;
+                    left:0;
+                    max-width: 32rem;
+                    /* opacity: 0.01; */
                     /* float: left; */
                 }
             </style>
@@ -991,20 +1002,35 @@
                     They're <span>quiet</span>,
                 </p>
             </div>
+            <div class="step inv-step" id="step-four-an">
+                <br>
+            </div>
+
             <div class="step pic-step" id="step-four-b"> 
                 <p>
                     host <span>public art</span>,
                 </p>
             </div>
+            <div class="step inv-step" id="step-four-bn">
+                <br>
+            </div>
+
             <div class="step pic-step" id="step-four-c"> 
                 <p>
                     often contain <span>greenery</span>,
                 </p>
             </div>
+            <div class="step inv-step" id="step-four-cn">
+                <br>
+            </div>
+
             <div class="step pic-step" id="step-four-d"> 
                 <p>
                     and are places to <b>socialize</b>.
                 </p>
+            </div>
+            <div class="step inv-step" id="step-four-dn">
+                <br>
             </div>
         </div>
 
@@ -1018,24 +1044,6 @@
                     And some days, an alley can truly show itself off as
                     a truly exceptional place, and <i>blossom</i>...
                 </p>
-            </div>
-        
-        
-
-        <!-- <div class="sticky-thing">
-            <div style="width: 59%; margin-right:0%; margin-left:auto; margin-bottom:auto;
-                margin-top:0%; background-color: red; padding:0.5rem;">
-                    <p style="font-size: 30px; margin:auto; margin-left:10%;">
-                        COURT ST
-                    </p>
-            </div>
-            <div style="width: 59%; margin-right:0%; margin-left:auto; margin-bottom:auto;
-            margin-top:0%; padding:0.5rem; text-align: center;">
-                <img src="img/court st festival.gif"> -->
-            <!-- </div> -->
-        <!-- </div> -->
-
-        <div class="scrolly-overlay">
 
             <div class="step" id="step-court">
                 <p>
