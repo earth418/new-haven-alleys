@@ -148,6 +148,7 @@
                 d3.select(".ai2html").style("transform", "scale(1.0)");
                 d3.select(".ai2html-container").style("z-index", 1);
                 d3.selectAll(".scrolly-overlay").style("margin-left","5%");
+                d3.select("#sExplore_A").classed("invisible", true);
 				// d3.select("#scrolly").style("background-color", "#ebd999");
             } else { // entering the zone
                 d3.select(".ai2html-container").style("transform", "scale(0.40)");
@@ -156,8 +157,33 @@
                 d3.select(".ai2html-container").style("z-index", 100);
                 d3.selectAll(".scrolly-overlay").style("margin-left","0");
                 d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
+                d3.select("#sExplore_A").classed("invisible", false);
             }
         });
+
+        let step4s = ["a", "an", "b", "bn", "bnn", "c", "cn", "d"];
+        let offsets = [
+            [-25, 20],
+            [-25, 20],
+            [25, -20],
+            [-25, 20],
+            [-25, -20],
+        ];
+
+        step4s.forEach((n, index) => {
+            d3.select("step-4" + n).on('stepin', function(e) {
+                d3.select(".ai2html").style("transform", "scale(5.0) translate(" +
+                 offsets[index][0] + "%," + offsets[index][1] + "%)");
+            })
+        })
+
+        // d3.select("#step-4a").on('stepin', function(e) {
+        //     d3.select(".ai2html").style("transform", "scale(5.0) translate(-25%,20%)");
+        // });
+        // d3.select("#step-4an").on('stepin', function(e) {
+        //     d3.select(".ai2html").style("transform", "scale(5.0) translate(-25%,20%)");
+        // });
+
 
         d3.select("#step-five").on('stepin', function(e) {
             // d3.selectAll("#s5_A").classed('invisible', true);
