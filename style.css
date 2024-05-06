@@ -37,6 +37,7 @@ body {
     /* height: 100%; */
     overflow:clip;
     transform-origin: bottom right;
+    /* position: absolute; */
 
     @media only screen and (min-width: 700px) {
         margin-left: auto;

@@ -143,13 +143,27 @@
 
         d3.select("#step-four").on('stepin', function(e) {
             if (e.detail.direction == 'up') {
-                
+                // d3.selectAll("#s5_A").classed('invisible', true);
+                // d3.select(".ai2html-container").classed("invisible", true);
+                d3.select(".ai2html-container").style("transform", "scale(1.0) translate(0.0)");
+                d3.select(".ai2html").style("transform", "scale(1.0)");
+                d3.select(".ai2html-container").style("z-index", 1);
+                d3.selectAll(".scrolly-overlay").style("margin-left","5%");
+				// d3.select("#scrolly").style("background-color", "#ebd999");
+            } else { // entering the zone
+                d3.select(".ai2html-container").style("transform", "scale(0.40)");
+                d3.select(".ai2html-container").style("margin-bottom", "1%");
+                d3.select(".ai2html-container").classed("invisible", false);
+                d3.select(".ai2html-container").style("z-index", 100);
+                d3.selectAll(".scrolly-overlay").style("margin-left","0");
+                d3.select("#scrolly").style("background-color", "#96bfe6"); // #81e8bc
             }
-            d3.selectAll("#s5_A").classed('invisible', true);
-            d3.select(".ai2html-container").style("transform", "scale(1.0) translate(0.0)");
-            d3.select(".ai2html").style("transform", "scale(1.0)");
             console.log("Hey!!");
         });
+
+        // d3.selectAll(".pic-step").on('stepin', function(e) {
+        //     console.log(e);
+        // });
 
 
         d3.select("#step-five").on('stepin',function(e) {
