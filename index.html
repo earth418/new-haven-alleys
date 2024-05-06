@@ -42,59 +42,82 @@
             /* @media only screen and (min-width: 700px) {
                 top: 120vmax;
             } */
-        }
-        
-        .quote-bubble {
-            display:block;
-            width: 16%;
-            margin-top: 0%;
-            /* padding-bottom: 100%; */
-            padding: 2%;
-            aspect-ratio: 3/2;
-            margin-left: 20%;
-            font-size: small;
-            
-
-            /* height: 50%; */
-            /* text-align: center; */
-            /* border-radius: 50%; */
-            background-image: url("quote_bubble_flip.svg");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-color: hsl(209, 62%, 75%, 0%);
-
-            /* @media only screen and (min-aspect-ratio: 7/5) {
-                /* padding: 2%; */
-                /* margin-top: 2%; */
-                /* font-size: large;
-            }  */
+            padding-bottom: 2rem;
         }
 
-        .quote-text {
+        .quote-text  {
             width: 100%;
-            padding: 0;
-            font-size: small;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 0.75rem !important;
+            position: relative;
+            opacity: 1.0;
+            display:flex;
+            align-self: center;
+            padding: 5% 2% 0% 0%;            
+
+
+            /* top: 50%; */
+            /* bottom: 50%; */
 
             @media only screen and (min-aspect-ratio: 7/5) {
                 /* padding: 2%; */
                 /* margin-top: 2%; */
-                font-size: large;
+                font-size: 1.75rem !important ;
             }
         }
 
-        
-        .right {
+        .bubble {
+            position: relative;
+            font-size: 2rem;
+            /* line-height: 24px; */
+            width: 30%;
+            background: rgba(250, 250, 250, 1.0);
+            border-radius: 40px;
+            padding: 24px;
+            text-align: center;
+            color: #000;
+
+            height: 30%;
+
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .bubble-bottom-left {
+            margin-right: 5%;
             margin-left: auto;
-            margin-right: 20%;
-            
-            background-image: url("quote_bubble.svg");
+        }
+        
+        .bubble-bottom-right {
+            margin-left: 5%;
         }
 
-        .quote-subtext {
-            bottom: 0;
-            font-size: xx-small;
-            text-align: left;
+        .bubble-bottom-left:before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-left: 24px solid rgba(250, 250, 250, 1.0);
+            border-right: 12px solid transparent;
+            border-top: 12px solid rgba(250, 250, 250, 1.0);
+            border-bottom: 20px solid transparent;
+            left: 32px;
+            bottom: -24px;
         }
+
+        .bubble-bottom-right:before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-left: 12px solid transparent;
+            border-right: 24px solid rgba(250, 250, 250, 1.0);
+            border-top: 12px solid rgba(250, 250, 250, 1.0);
+            border-bottom: 20px solid transparent;
+            right: 32px;
+            bottom: -24px;
+        }
+
     </style>
 
     <section id="scrolly">
@@ -776,18 +799,21 @@
                 </p>
             </div>
 
-            <div id="quote-bubbles" style="background-color: rgba(200, 200, 200, 0.4); margin-left:auto;">
-                <div style="text-align: center; font-size:x-large; font-weight:bold;">
+            <div id="quote-bubbles" style="background-color: rgba(200, 200, 240, 0.8); margin: 4rem; margin-left:auto;">
+                <div style="text-align: center; font-size:2rem; font-weight:bold; padding:2rem;">
                     <i>Why were you walking through this alley?</i>
                 </div>
 
-                <div class="quote-bubble">
+                <div style="height:25%; background-image:url('img/brick-floor.jpg'); border: 4px black ridge; background-size: 200%; width:10%; position: absolute; left:45%;right:45%;">
+                </div>
+
+                <div class="bubble bubble-bottom-right">
                     <p class="quote-text">"It's much faster"</p>
                 </div>
-                <div class="quote-bubble right">
+                <div class="bubble bubble-bottom-left">
                     <p class="quote-text">"The place I'm going is right here"</p>
                 </div>
-                <div class="quote-bubble">
+                <div class="bubble bubble-bottom-right">
                     <p class="quote-text">"For the speed!"</p>
                 </div>
                 <!-- <p class="quote-bubble">
@@ -816,7 +842,6 @@
         <div class="scrolly-overlay">
             
             <div class="step" id="step-zero">
-                <!-- <p> <span style="font-weight: bold;"> -->
                 <p>
                 While <b>New Haven</b> is known for a lot — 
                 Apizza, Yale, Elm trees — 
@@ -826,7 +851,7 @@
             
             <div class="step" id="step-one">
                 <p>
-                    New Haven's alleys form an entire 
+                    but these alleys form an entire 
                     navigable network of <span style="font-weight: bold; color:#a93400;">invisible 
                         paths</span>, traversing and snaking through the city.
                 </p>
@@ -875,10 +900,10 @@
                         </div>
                     </div>
                 </p>
-                <p>
-                    <!-- <i>Note that the <b>Alexander Walk</b> will be considered 
-                    an alley, but <b>Wall St</b> will not.</i> -->
-                </p>
+                <!-- <p>
+                    <i>Note that the <b>Alexander Walk</b> will be considered 
+                    an alley, but <b>Wall St</b> will not.</i>
+                </p> -->
             </div>
         </div>
 
@@ -931,25 +956,29 @@
                         in between.</span> 
                 </p>
             </div>
+
+            <div class="step" id="step-four" style="opacity: 0.01%;">
+                <br>
+            </div>
             
-            <div class="step" id="step-four-a"> 
+            <div class="step" id="step-four-a">
                 <p>
-                    They're quiet,
+                    They're <span>quiet</span>,
                 </p>
             </div>
             <div class="step" id="step-four-b"> 
                 <p>
-                    opportunities for public art,
+                    host <span>public art</span>,
                 </p>
             </div>
             <div class="step" id="step-four-c"> 
                 <p>
-                    often contain greenery.
+                    often contain <span>greenery</span>,
                 </p>
             </div>
             <div class="step" id="step-four-d"> 
                 <p>
-                    and places to socialize.
+                    and are places to <b>socialize</b>.
                 </p>
 
                 
@@ -957,8 +986,8 @@
             
             <div class="step" id="step-five"> 
                 <p>
-                    And some days, an alley can truly show itself off, 
-                    become truly exceptional, and <i>blossom</i>...
+                    And some days, an alley can truly show itself off as
+                    a truly exceptional place, and <i>blossom</i>...
                 </p>
             </div>
         </div>
