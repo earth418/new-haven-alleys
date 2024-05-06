@@ -5,7 +5,7 @@
         d3.select(".ai2html-container").classed("invisible", true);
         d3.selectAll("#s0_A, #s1_A, #s2_A, #s3_A, \
         #s4_A, #s5_A, #sMid_A, #sNarrow_A, \
-        #sWide_A, #sExplore_A, #sCourt_A").classed("invisible", true);
+        #sWide_A, #sExplore_A, #sCourt_A, .gate-pic").classed("invisible", true);
     });
 
 		// for debugging
@@ -251,7 +251,7 @@
             d3.selectAll("#sCourt_A").classed('invisible', true);
             d3.select(".ai2html-container").classed("invisible", true);
             // d3.select(".ai2html").style("transform", "scale(1.0) translate(0.0,0.0)");
-
+            d3.selectAll(".gate-pic").classed('invisible',false);
         });
 
         d3.select("#step-nine").on('stepin', function(e) {
