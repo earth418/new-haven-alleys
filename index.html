@@ -60,7 +60,7 @@
             /* top: 50%; */
             /* bottom: 50%; */
 
-            @media only screen and (min-aspect-ratio: 7/5) {
+            @media only screen and (min-aspect-ratio: 6/5) {
                 /* padding: 2%; */
                 /* margin-top: 2%; */
                 font-size: 1.75rem !important ;
@@ -1619,11 +1619,11 @@
 
         <div style="margin-top:-7.75%;position:absolute;">
             <div class="media-section">
-                <video width="100%" loop>
-                    <source src="img/burgerway_vid.mp4" loop>
+                <video width="100%" loop autoplay controls>
+                    <source src="img/burgerway_vid.mp4">
                 </video>
-                <video width="100%">
-                    <source src="img/hyperion-court.mp4" loop>
+                <video width="100%" loop autoplay controls>
+                    <source src="img/hyperion-court.mp4">
                 </video>
             </div>
             <div class="media-section">
@@ -1841,7 +1841,7 @@
             </p>
             <br>
 
-            <video width="75%" autoplay loop id="outro-video">
+            <video width="75%" autoplay loop controls id="outro-video">
                 <source src="court st quiet.mp4" loop>
             </video>
         </div>

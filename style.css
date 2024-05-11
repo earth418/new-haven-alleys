@@ -152,7 +152,7 @@ h1 {
                  #000000 1px 0 5px,
                  #000000 1px 1px;
 
-    @media only screen and (min-aspect-ratio: 7/5) {
+    @media only screen and (min-aspect-ratio: 6/5) {
         top:60%;
         /* font-size: 8.0rem; */
         font-size: 17vh;
@@ -179,7 +179,7 @@ h2 {
                  #000000 1px 0 2px,
                  #000000 1px 1px;
 
-    @media only screen and (min-aspect-ratio: 7/5) {
+    @media only screen and (min-aspect-ratio: 6/5) {
         top:120%;
         font-size: 3.0rem;
     }
@@ -232,7 +232,7 @@ h3 {
     left:0;
     z-index:51;
     bottom:7%;
-    @media only screen and (min-aspect-ratio: 7/5) {
+    @media only screen and (min-aspect-ratio: 6/5) {
         bottom:-50%;
     }
 }
